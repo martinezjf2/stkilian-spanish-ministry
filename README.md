@@ -40,3 +40,25 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 Currently using Node Version: 20.5.0
+
+**Ideas for the project:**
+
+- Have all the movements on the website
+- Have registration forms for all courses and curriculums
+- Have the daily gospel as well as the audio
+- Have the weekly bulletins from church on the website
+- Have calendar of event on the website
+- Have AI Bot enabled for any questions that may arise
+  - Make sure to have a file that has the questions and ansrs
+- Make sure the application is multilingual
+- Add Scrollmagic and GSAP for Advanced CSS Animations
+- Add Firebase for User Authentifation for Log in
+- Add topics about the Jubilee Year
+- Email Marketing such as newsletter if users sign up for newsletters
+- Add a page for group pictures as well
+- Terms of Policy for the Page
+- Make sure to add Google Analytics 4 (Review the Real Estate Application to see what was done)
+- Make sure it is responsive for mobile devices
+- Deploiy on Netlify, and custom domain for seguidoresdejesus.com remove from heroku
+- Have a .env file for passwords and API Keys, and make sure to add them onto Netlify
+- Make sure that each page has a unique name for the tabname
