@@ -5,109 +5,158 @@ export default function Footer() {
     <footer className="bg-black text-white py-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Column 1 */}
+          {/* Movements */}
           <div>
-            <h2 className="text-lg font-semibold mb-4">Company</h2>
+            <h2 className="text-lg font-semibold mb-4">Movements</h2>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:underline">
-                  About Us
+                <a href="/movements/youth-ministry" className="hover:underline">
+                  Youth Ministry
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Careers
+                <a
+                  href="/movements/family-ministry"
+                  className="hover:underline"
+                >
+                  Family Ministry
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Press
+                <a
+                  href="/movements/charismatic-renewal"
+                  className="hover:underline"
+                >
+                  Charismatic Renewal
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a
+                  href="/movements/missionary-outreach"
+                  className="hover:underline"
+                >
+                  Missionary Movements
+                </a>
+              </li>
+              <li>
+                <a href="/movements/lectors" className="hover:underline">
+                  Lectors
+                </a>
+              </li>
+              <li>
+                <a href="/movements/hospitality" className="hover:underline">
+                  Hospitality
+                </a>
+              </li>
+              <li>
+                <a href="/movements/guadalupen" className="hover:underline">
+                  Guadalupen
+                </a>
+              </li>
+              <li>
+                <a href="/movements/alter" className="hover:underline">
+                  Alter
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Useful Links */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4">Useful Links</h2>
+            <ul className="space-y-2">
+              <li>
+                <a href="/links/diocesan-website" className="hover:underline">
+                  Diocesan Website
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/links/liturgical-calendar"
+                  className="hover:underline"
+                >
+                  Liturgical Calendar
+                </a>
+              </li>
+              <li>
+                <a href="/links/bible-online" className="hover:underline">
+                  Bible Online
+                </a>
+              </li>
+              <li>
+                <a href="/links/daily-readings" className="hover:underline">
+                  Daily Readings
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Videos */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4">Resources</h2>
+            <ul className="space-y-2">
+              <li>
+                <a href="/resources/blog" className="hover:underline">
                   Blog
                 </a>
               </li>
-            </ul>
-          </div>
-
-          {/* Column 2 */}
-          <div>
-            <h2 className="text-lg font-semibold mb-4">Support</h2>
-            <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:underline">
-                  Help Center
+                <a href="/resources/testimonies" className="hover:underline">
+                  Testimonies
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Contact Us
+                <a
+                  href="/resources/faith-formation"
+                  className="hover:underline"
+                >
+                  Faith Formation
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  FAQs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Community
+                <a
+                  href="/resources/community-events"
+                  className="hover:underline"
+                >
+                  Community Events
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3 */}
+          {/* Registration Forms */}
           <div>
-            <h2 className="text-lg font-semibold mb-4">Services</h2>
+            <h2 className="text-lg font-semibold mb-4">Registration Forms</h2>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:underline">
-                  Consulting
+                <a
+                  href="/forms/baptism-registration"
+                  className="hover:underline"
+                >
+                  Baptism Registration
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Sales
+                <a href="/forms/first-communion" className="hover:underline">
+                  First Communion
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Pricing
+                <a href="/forms/confirmation" className="hover:underline">
+                  Confirmation
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Affiliate Program
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4 */}
-          <div>
-            <h2 className="text-lg font-semibold mb-4">Legal</h2>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:underline">
-                  Privacy Policy
+                <a
+                  href="/forms/retreat-registration"
+                  className="hover:underline"
+                >
+                  R.I.C.A
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Cookie Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Licenses
+                <a href="/forms/volunteer" className="hover:underline">
+                  Volunteer
                 </a>
               </li>
             </ul>
@@ -117,7 +166,7 @@ export default function Footer() {
         {/* Divider and Bottom Section */}
         <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400">
-            © 2025 YourCompany. All rights reserved.
+            © 2025 Seguidores de Jesus. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white">
