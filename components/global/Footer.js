@@ -121,6 +121,22 @@ export default function Footer() {
                   Community Events
                 </a>
               </li>
+              <li>
+                <a
+                  href="/resources/weddings"
+                  className="hover:underline"
+                >
+                  Weddings
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/resources/quincenera"
+                  className="hover:underline"
+                >
+                  Quinceñera
+                </a>
+              </li>
             </ul>
           </div>
 
