@@ -23,19 +23,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="/movements/charismatic-renewal"
-                  className="hover:underline"
-                >
+                <a href="/movements/renovation" className="hover:underline">
                   Charismatic Renewal
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/movements/missionary-outreach"
-                  className="hover:underline"
-                >
-                  Missionary Movements
                 </a>
               </li>
               <li>
@@ -53,11 +42,6 @@ export default function Footer() {
                   Guadalupen
                 </a>
               </li>
-              <li>
-                <a href="/movements/alter" className="hover:underline">
-                  Alter
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -66,51 +50,13 @@ export default function Footer() {
             <h2 className="text-lg font-semibold mb-4">Useful Links</h2>
             <ul className="space-y-2">
               <li>
-                <a href="/links/diocesan-website" className="hover:underline">
+                <a href="#" className="hover:underline">
                   Diocesan Website
                 </a>
               </li>
               <li>
-                <a
-                  href="/links/liturgical-calendar"
-                  className="hover:underline"
-                >
-                  Liturgical Calendar
-                </a>
-              </li>
-              <li>
-                <a href="/links/bible-online" className="hover:underline">
-                  Bible Online
-                </a>
-              </li>
-              <li>
-                <a href="/links/daily-readings" className="hover:underline">
-                  Daily Readings
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Videos */}
-          <div>
-            <h2 className="text-lg font-semibold mb-4">Resources</h2>
-            <ul className="space-y-2">
-              <li>
-                <a href="/resources/blog" className="hover:underline">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="/resources/testimonies" className="hover:underline">
-                  Testimonies
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/resources/faith-formation"
-                  className="hover:underline"
-                >
-                  Faith Formation
+                <a href="/resources/calendar" className="hover:underline">
+                  Calendar
                 </a>
               </li>
               <li>
@@ -122,18 +68,34 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="/resources/weddings"
-                  className="hover:underline"
-                >
+                <a href="/resources/readings" className="hover:underline">
+                  Daily Readings
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Videos */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4">Resources</h2>
+            <ul className="space-y-2">
+              <li>
+                <a href="/resources/blogs" className="hover:underline">
+                  Blogs
+                </a>
+              </li>
+              <li>
+                <a href="/resources/testimonies" className="hover:underline">
+                  Testimonies
+                </a>
+              </li>
+              <li>
+                <a href="/resources/weddings" className="hover:underline">
                   Weddings
                 </a>
               </li>
               <li>
-                <a
-                  href="/resources/quincenera"
-                  className="hover:underline"
-                >
+                <a href="/resources/quincenera" className="hover:underline">
                   Quinceñera
                 </a>
               </li>
@@ -168,6 +130,11 @@ export default function Footer() {
                   className="hover:underline"
                 >
                   R.I.C.A
+                </a>
+              </li>
+              <li>
+                <a href="/movements/alter" className="hover:underline">
+                  Alter
                 </a>
               </li>
               <li>

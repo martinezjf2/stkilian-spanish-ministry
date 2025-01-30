@@ -1,5 +1,8 @@
+import ComingSoon from "@/components/global/ComingSoon";
 import Image from "next/image";
 
 export default function Resources() {
-  return <h1 className="text-2xl">Resources Page</h1>;
+    return <>
+    <ComingSoon name="Resources"/>
+    </>
 }
