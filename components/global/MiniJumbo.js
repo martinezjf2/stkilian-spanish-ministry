@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
 
-const images = [
-  "/images/banda.jpg", // Replace with actual image paths
-  "/images/banda2.jpg",
-  "/images/familia.jpg",
-];
 
-export default function MovementsHeader() {
+export default function MovementsHeader({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Automatic slideshow logic

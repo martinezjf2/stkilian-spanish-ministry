@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "/images/familia.jpg", // Replace with your image paths
-  "/images/banda.jpg",
-  "/images/renovacion.jpg",
-  "/images/jovenes.jpg",
-  "/images/guadalupanos.jpg",
-  "/images/monagios.jpg",
-  "/images/banda2.jpg",
+  "/images/home/familia.jpg", // Replace with your image paths
+  "/images/home/banda.jpg",
+  "/images/home/renovacion.jpg",
+  "/images/home/guadalupanos.jpg",
+  "/images/home/jovenes.jpg",
+  "/images/home/monagios.jpg",
+  "/images/home/jovenes2.jpg",
+  "/images/home/banda2.jpg",
 ];
 
 export default function Jumbotron() {

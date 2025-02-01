@@ -69,6 +69,7 @@ Currently using Node Version: 20.5.0
 
   - Contact Us
   - Weekly Bulletin from St.Kilian
+  - Mass
 
 **Create Components that are going to be global for several purposes:**
 
