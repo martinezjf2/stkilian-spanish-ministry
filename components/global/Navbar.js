@@ -7,7 +7,7 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-100 text-black px-10 py-4">
+    <nav className="bg-gray-100 text-black px-10 py-2">
       <div className="max-w-10xl px-6 md:px-12 py-4 flex justify-between items-center">
         {/* Left section: Logo and Links */}
         <div className="flex items-center space-x-8">
