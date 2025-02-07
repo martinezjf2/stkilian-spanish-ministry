@@ -24,7 +24,7 @@ export default function Jumbotron() {
   }, []);
 
   return (
-    <div className="relative w-full h-[60vh] md:h-[93vh] overflow-hidden">
+    <div className="relative w-full h-[60vh] md:h-[100vh] overflow-hidden">
       {/* Slide images */}
       {images.map((image, index) => (
         <div

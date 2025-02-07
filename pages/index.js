@@ -24,7 +24,7 @@ export default function Home() {
         </p>
       </div>
       <SplitSection />
-      <CardsComponent />
+      {/* <CardsComponent /> */}
       <IconsComponent />
       <GroupJumbotron />
       <UpcomingEvents />
