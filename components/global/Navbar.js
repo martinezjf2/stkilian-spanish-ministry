@@ -1,23 +1,26 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react"; // Lucide icons for hamburger and close
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
+  // const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [textColorWhite, setTextColorWhite] = useState(false);
 
-  // Handle navbar visibility based on scroll direction
+  const backgroundImageHeight = 850; // Adjust based on your background image height
+
+  // Handle navbar visibility and text color based on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        // If scrolling down, hide the navbar
-        setShowNavbar(false);
+      // Change text color when scrolling past the background image
+      if (window.scrollY > backgroundImageHeight) {
+        setTextColorWhite(true);
       } else {
-        // If scrolling up, show the navbar
-        setShowNavbar(true);
+        setTextColorWhite(false);
       }
+
       setLastScrollY(window.scrollY);
     };
 
@@ -29,20 +32,21 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`${
-        showNavbar ? "top-0" : "-top-20"
-      } bg-transparent sticky backdrop-blur-md bg-white/10 text-black transition-all duration-500 left-0 w-full z-50 px-10 py-2`}
+      className={`bg-transparent fixed backdrop-blur-md bg-white/05 transition-all duration-500 left-0 w-full z-50 px-10 py-2`}
     >
-      <div className={`max-w-10xl px-6 md:px-12 py-4 flex justify-between items-center ${showNavbar ? "text-white" : "text-black"}`}>
+      <div
+        className={`max-w-10xl px-6 md:px-12 py-4 flex justify-between items-center ${
+          textColorWhite ? "text-black" : "text-white"
+        }`}
+      >
         {/* Left section: Logo and Links */}
         <div className="flex items-center space-x-8">
-          {/* Logo */}
           <Link href="/" className="text-2xl font-bold">
             Seguidores De Jesus
           </Link>
 
-          {/* Main menu links (hidden on mobile, shown on larger screens) */}
-          <div className={`hidden lg:flex space-x-5`}>
+          {/* Main menu links */}
+          <div className="hidden lg:flex space-x-5">
             <Link href="/" className="px-2 py-2 hover:underline">
               Home
             </Link>
@@ -141,10 +145,7 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger menu for mobile */}
-        <button
-          className="lg:hidden text-black"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
