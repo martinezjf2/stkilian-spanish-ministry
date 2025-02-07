@@ -33,7 +33,7 @@ export default function Chatbot() {
       {!isOpen && (
         <button
           onClick={toggleChatbot}
-          className="fixed bottom-5 right-5 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-700"
+          className="fixed bottom-5 transition-all hover:animate-bounce right-5 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-700"
         >
           💬 Chat
         </button>

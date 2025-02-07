@@ -41,19 +41,31 @@ export default function Navbar() {
       >
         {/* Left section: Logo and Links */}
         <div className="flex items-center space-x-8">
-          <Link href="/" className="text-2xl font-bold">
+          <Link
+            href="/"
+            className="text-2xl font-bold transform md:hover:-translate-y-1 transition duration-300"
+          >
             Seguidores De Jesus
           </Link>
 
           {/* Main menu links */}
           <div className="hidden lg:flex space-x-5">
-            <Link href="/" className="px-2 py-2 hover:underline">
+            <Link
+              href="/"
+              className="px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
+            >
               Home
             </Link>
-            <Link href="/about" className="px-2 py-2 hover:underline">
+            <Link
+              href="/about"
+              className="px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
+            >
               About
             </Link>
-            <Link href="/resources" className="px-2 py-2 hover:underline">
+            <Link
+              href="/resources"
+              className="px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
+            >
               Resources
             </Link>
 
@@ -61,7 +73,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="px-2 py-2 hover:underline"
+                className="px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
               >
                 Groups ▼
               </button>
@@ -91,7 +103,7 @@ export default function Navbar() {
 
             <Link
               href="/resources/community-events"
-              className="px-2 py-2 hover:underline"
+              className="px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
             >
               Events
             </Link>
@@ -132,13 +144,13 @@ export default function Navbar() {
         <div className={`${menuOpen ? "block" : "hidden"} lg:block space-x-5`}>
           <Link
             href="/language"
-            className="block md:inline-block px-2 py-2 hover:underline"
+            className="block md:inline-block px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
           >
             Language
           </Link>
           <Link
             href="/login"
-            className="block md:inline-block px-2 py-2 hover:underline"
+            className="block md:inline-block px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
           >
             Log In
           </Link>
