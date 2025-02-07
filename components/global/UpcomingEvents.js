@@ -47,7 +47,7 @@ const UpcomingEvents = () => {
               <p className="text-gray-600 text-sm mb-1">📅 {event.date}</p>
               <p className="text-gray-600 text-sm mb-3">📍 {event.location}</p>
               <p className="text-gray-700 mb-4">{event.description}</p>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+              <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-all">
                 Learn More
               </button>
             </div>

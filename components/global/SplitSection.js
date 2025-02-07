@@ -22,7 +22,7 @@ const SplitSection = () => {
             can add more details to describe the topic or highlight features and
             benefits.
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+          <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all">
             Learn More
           </button>
         </div>
