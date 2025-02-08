@@ -4,10 +4,21 @@ import axios from "axios";
 export default function Chatbot() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
-  const [isOpen, setIsOpen] = useState(false); // Toggle chat window
+  const [isOpen, setIsOpen] = useState(false);
 
+  // Function to handle opening the chat window with a welcome message
   const toggleChatbot = () => {
-    setIsOpen(!isOpen); // Show or hide chat window
+    if (!isOpen) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content:
+            "Welcome to St. Kilian! My name is Gio. How can I help you today?",
+        },
+      ]);
+    }
+    setIsOpen(!isOpen); // Toggle open/close state
   };
 
   const sendMessage = async () => {
@@ -33,7 +44,7 @@ export default function Chatbot() {
       {!isOpen && (
         <button
           onClick={toggleChatbot}
-          className="fixed bottom-5 transition-all hover:animate-bounce right-5 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-700"
+          className="fixed bottom-5 right-5 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-700"
         >
           💬 Chat
         </button>
@@ -44,7 +55,7 @@ export default function Chatbot() {
         <div className="fixed bottom-5 right-5 w-80 bg-white rounded-lg shadow-lg">
           {/* Header */}
           <div className="flex justify-between items-center bg-blue-500 text-white p-3 rounded-t-lg">
-            <h3 className="text-lg font-semibold">Welcome to AI Chatbot</h3>
+            <h3 className="text-lg font-semibold">AI Chatbot</h3>
             <button onClick={toggleChatbot} className="text-white">
               ✖
             </button>
@@ -61,7 +72,7 @@ export default function Chatbot() {
                     : "bg-gray-200 text-left"
                 }`}
               >
-                <strong>{msg.role === "user" ? "You:" : "Bot:"}</strong>{" "}
+                <strong>{msg.role === "user" ? "You:" : "Gio:"}</strong>{" "}
                 {msg.content}
               </div>
             ))}
