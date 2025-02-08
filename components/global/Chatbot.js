@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
 export default function Chatbot() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const lastMessageRef = useRef(null); // Reference to the last message
 
   // Function to handle opening the chat window with a welcome message
   const toggleChatbot = () => {
@@ -20,6 +21,13 @@ export default function Chatbot() {
     }
     setIsOpen(!isOpen); // Toggle open/close state
   };
+
+  // Scroll to the latest message when messages update
+  useEffect(() => {
+    if (lastMessageRef.current) {
+      lastMessageRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
 
   const sendMessage = async () => {
     if (!input.trim()) return;
@@ -76,6 +84,8 @@ export default function Chatbot() {
                 {msg.content}
               </div>
             ))}
+            {/* Dummy div for scrolling */}
+            <div ref={lastMessageRef}></div>
           </div>
 
           {/* Input Field */}
