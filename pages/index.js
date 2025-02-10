@@ -8,6 +8,7 @@ import NewsletterCTA from "@/components/global/NewsletterCTA";
 import UpcomingEvents from "@/components/global/UpcomingEvents";
 import PhotoGallery from "@/components/global/PhotoGallery";
 import IconsComponent from "@/components/global/IconsComponent";
+import VideoComponent from "@/components/global/VideoComponent";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,6 +25,7 @@ export default function Home() {
         </p>
       </div>
       <SplitSection />
+      <VideoComponent link="https://www.youtube.com/embed/8OMFHVi4IGQ?si=hIeeJwLL6ipCtJJq" />
       {/* <CardsComponent /> */}
       <IconsComponent />
       <GroupJumbotron />
