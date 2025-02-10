@@ -38,7 +38,7 @@ export default function MovementsHeader({ images, title }) {
 
           {/* Overlay Text for Mobile and Tablet */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 md:hidden bg-black/50">
-            <h1 className="text-4xl font-extrabold">{ title }</h1>
+            <h1 className="text-4xl font-extrabold">{title}</h1>
             <p className="mt-2 text-lg">Join our spiritual journey together.</p>
           </div>
         </div>
@@ -47,14 +47,14 @@ export default function MovementsHeader({ images, title }) {
       {/* Left Side: Header and Slogan (Desktop Only) */}
       <div className="hidden md:flex absolute inset-y-0 left-0 md:w-1/2 bg-black text-white px-10 md:px-20 flex-col justify-center">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          { title }
+          {title}
         </h1>
         <p className="text-lg md:text-2xl mt-4">
           Join our community and grow spiritually through youth, family, and
           faith-based movements.
         </p>
         <h2 className="text-2xl md:text-3xl font-semibold mt-6">
-          "Faith in Action"
+          &quot;Faith in Action&quot;
         </h2>
         <p className="mt-3 text-xl">Where community and faith unite.</p>
       </div>

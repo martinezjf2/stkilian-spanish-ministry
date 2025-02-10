@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,37 +11,40 @@ export default function Footer() {
             <h2 className="text-lg font-semibold mb-4">Movements</h2>
             <ul className="space-y-2">
               <li>
-                <a href="/movements/youth-ministry" className="hover:underline">
+                <Link
+                  href="/movements/youth-ministry"
+                  className="hover:underline"
+                >
                   Youth Ministry
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/movements/family-ministry"
                   className="hover:underline"
                 >
                   Family Ministry
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/movements/renovation" className="hover:underline">
+                <Link href="/movements/renovation" className="hover:underline">
                   Charismatic Renewal
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/movements/lectors" className="hover:underline">
+                <Link href="/movements/lectors" className="hover:underline">
                   Lectors
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/movements/hospitality" className="hover:underline">
+                <Link href="/movements/hospitality" className="hover:underline">
                   Hospitality
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/movements/guadalupen" className="hover:underline">
+                <Link href="/movements/guadalupen" className="hover:underline">
                   Guadalupen
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -50,54 +54,54 @@ export default function Footer() {
             <h2 className="text-lg font-semibold mb-4">Useful Links</h2>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   Diocesan Website
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/resources/calendar" className="hover:underline">
+                <Link href="/resources/calendar" className="hover:underline">
                   Calendar
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/resources/community-events"
                   className="hover:underline"
                 >
                   Community Events
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/resources/readings" className="hover:underline">
+                <Link href="/resources/readings" className="hover:underline">
                   Daily Readings
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Videos */}
+          {/* Resources */}
           <div>
             <h2 className="text-lg font-semibold mb-4">Resources</h2>
             <ul className="space-y-2">
               <li>
-                <a href="/resources/blogs" className="hover:underline">
+                <Link href="/resources/blogs" className="hover:underline">
                   Blogs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/resources/testimonies" className="hover:underline">
+                <Link href="/resources/testimonies" className="hover:underline">
                   Testimonies
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/resources/weddings" className="hover:underline">
+                <Link href="/resources/weddings" className="hover:underline">
                   Weddings
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/resources/quincenera" className="hover:underline">
+                <Link href="/resources/quincenera" className="hover:underline">
                   Quinceñera
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -107,40 +111,40 @@ export default function Footer() {
             <h2 className="text-lg font-semibold mb-4">Registration Forms</h2>
             <ul className="space-y-2">
               <li>
-                <a
+                <Link
                   href="/forms/baptism-registration"
                   className="hover:underline"
                 >
                   Baptism Registration
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/forms/first-communion" className="hover:underline">
+                <Link href="/forms/first-communion" className="hover:underline">
                   First Communion
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/forms/confirmation" className="hover:underline">
+                <Link href="/forms/confirmation" className="hover:underline">
                   Confirmation
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/forms/retreat-registration"
                   className="hover:underline"
                 >
                   R.I.C.A
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/movements/alter" className="hover:underline">
+                <Link href="/movements/alter" className="hover:underline">
                   Alter
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/forms/volunteer" className="hover:underline">
+                <Link href="/forms/volunteer" className="hover:underline">
                   Volunteer
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -152,18 +156,18 @@ export default function Footer() {
             © 2025 Seguidores de Jesus. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white">
+            <Link href="/" className="text-gray-400 hover:text-white">
               Facebook
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            </Link>
+            <Link href="/" className="text-gray-400 hover:text-white">
               Twitter
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            </Link>
+            <Link href="/" className="text-gray-400 hover:text-white">
               LinkedIn
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            </Link>
+            <Link href="/" className="text-gray-400 hover:text-white">
               Instagram
-            </a>
+            </Link>
           </div>
         </div>
       </div>
