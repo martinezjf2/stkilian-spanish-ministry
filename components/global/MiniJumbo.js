@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 
 
-export default function MovementsHeader({ images }) {
+export default function MovementsHeader({ images, title }) {
+  console.log({title});
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Automatic slideshow logic
@@ -36,7 +38,7 @@ export default function MovementsHeader({ images }) {
 
           {/* Overlay Text for Mobile and Tablet */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 md:hidden bg-black/50">
-            <h1 className="text-4xl font-extrabold">Movements of Faith</h1>
+            <h1 className="text-4xl font-extrabold">{ title }</h1>
             <p className="mt-2 text-lg">Join our spiritual journey together.</p>
           </div>
         </div>
@@ -45,7 +47,7 @@ export default function MovementsHeader({ images }) {
       {/* Left Side: Header and Slogan (Desktop Only) */}
       <div className="hidden md:flex absolute inset-y-0 left-0 md:w-1/2 bg-black text-white px-10 md:px-20 flex-col justify-center">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          Movements of Faith
+          { title }
         </h1>
         <p className="text-lg md:text-2xl mt-4">
           Join our community and grow spiritually through youth, family, and

@@ -78,24 +78,48 @@ export default function Navbar() {
                 Groups ▼
               </button>
               {dropdownOpen && (
-                <div className="absolute mt-2 w-40 bg-white text-black shadow-md rounded-md z-10">
+                <div className="absolute mt-2 w-60 bg-white text-black shadow-md rounded-md z-10">
                   <Link
-                    href="/groups/option1"
+                    href="/movements/youth-ministry"
                     className="block px-4 py-2 hover:bg-gray-200"
                   >
-                    Group 1
+                    Youth Group
                   </Link>
                   <Link
-                    href="/groups/option2"
+                    href="/movements/renovation"
                     className="block px-4 py-2 hover:bg-gray-200"
                   >
-                    Group 2
+                    Charismatic Renewal
                   </Link>
                   <Link
-                    href="/groups/option3"
+                    href="/movements/alter"
                     className="block px-4 py-2 hover:bg-gray-200"
                   >
-                    Group 3
+                    Alter Servers
+                  </Link>
+                  <Link
+                    href="/movements/family-ministry"
+                    className="block px-4 py-2 hover:bg-gray-200"
+                  >
+                    Family Ministry
+                  </Link>
+                  <Link
+                    href="/movements/guadalupen"
+                    className="block px-4 py-2 hover:bg-gray-200"
+                  >
+                    Guadalupen Ministry
+                  </Link>
+                  <Link
+                    href="/movements/lectors"
+                    className="block px-4 py-2 hover:bg-gray-200"
+                  >
+                    Lectors
+                  </Link>
+                  <Link
+                    href="/movements/hospitality"
+                    className="block px-4 py-2 hover:bg-gray-200"
+                  >
+                    Hospitality
                   </Link>
                 </div>
               )}
@@ -164,3 +188,9 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
+
+// Need to improve this component, that when I render a new page, I want the drop down to close.
+// Need to change the arrow to a arrow from fortawesome
+// Add the logo of the white dove instead of Seguidores de Jesus

@@ -10,6 +10,7 @@ export default function Guadalupen() {
             "/images/guadalupanos/guada.jpg",
             "/images/guadalupanos/guada2.jpg",
           ]}
+          title="Guadalupen Ministry"
         />
         <ComingSoon name="Guadalupen" />
       </>

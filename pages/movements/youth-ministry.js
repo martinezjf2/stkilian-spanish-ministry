@@ -14,6 +14,7 @@ export default function YouthMinistry() {
             "/images/jovenes/jovenes5.jpg",
             "/images/jovenes/jovenes6.jpg",
           ]}
+          title="Angels of God"
         />
         <ComingSoon name="Youth Ministry" />
       </>

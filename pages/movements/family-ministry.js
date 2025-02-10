@@ -10,6 +10,7 @@ export default function FamilyMinistry() {
           "/images/familia/familia2.jpg",
           "/images/familia/familia3.jpg",
         ]}
+        title="Family Ministry"
       />
       <ComingSoon name="Family Ministry" />
     </>
