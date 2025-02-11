@@ -5,6 +5,9 @@ import MiniJumbo from "@/components/global/MiniJumbo";
 export default function Renovation() {
     return (
       <>
+        <Head>
+          <title>Seguidores de Jesus</title>
+        </Head>
         <MiniJumbo
           images={[
             "/images/jovenes/jovenes.jpg",

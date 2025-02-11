@@ -17,6 +17,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Seguidores de Jesus</title>
+      </Head>
       <Jumbotron />
       <KlaviyoForm />
       <div className="p-10 text-center">

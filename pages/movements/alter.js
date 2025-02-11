@@ -5,6 +5,9 @@ import ComingSoon from "@/components/global/ComingSoon";
 export default function Alter() {
     return (
       <>
+        <Head>
+          <title>Seguidores de Jesus</title>
+        </Head>
         <MiniJumbo
           images={[
             "/images/jovenes/jovenes.jpg",

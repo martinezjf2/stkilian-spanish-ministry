@@ -4,6 +4,9 @@ import MiniJumbo from "@/components/global/MiniJumbo";
 export default function FamilyMinistry() {
   return (
     <>
+      <Head>
+        <title>Seguidores de Jesus</title>
+      </Head>
       <MiniJumbo
         images={[
           "/images/familia/familia.jpg",

@@ -3,10 +3,12 @@ import Head from "next/head";
 import Image from "next/image";
 
 export default function About() {
-    return <>
+    return (
+      <>
         <Head>
-            <title>SDJ - About Us</title>
+          <title>Seguidores de Jesus</title>
         </Head>
-    <ComingSoon name="About" />
-    </>
+        <ComingSoon name="About" />
+      </>
+    );
 }

@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
         <title>Seguidores de Jesus</title>
       </Head>
       <Navbar />
-      {/* <GoogleAnalytics gaId="G-T94Q6D7ZC3" debug /> */}
+      <GoogleAnalytics gaId="G-T94Q6D7ZC3" debug />
       <Component {...pageProps} />
       <Chatbot />
       <Footer />

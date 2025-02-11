@@ -13,7 +13,7 @@ const KlaviyoForm = () => {
 
       // Set a 5-second delay before showing the form
       setTimeout(() => {
-        window._klOnsite.push(["form.disable"]);
+        // window._klOnsite.push(["form.disable"]);
         window._klOnsite.push(["openForm", "Yerzc7"]);
       }, 5000);
     };
