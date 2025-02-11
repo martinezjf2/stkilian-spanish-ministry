@@ -47,3 +47,66 @@ const NewsletterCTA = () => {
 };
 
 export default NewsletterCTA;
+
+
+
+
+// import { useState } from "react";
+
+// const KlaviyoForm = () => {
+//   const [email, setEmail] = useState("");
+//   const [message, setMessage] = useState("");
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setMessage("Submitting...");
+
+//     try {
+//       const response = await fetch(
+//         "https://a.klaviyo.com/api/v2/list/YOUR_LIST_ID/subscribe?api_key=YOUR_PUBLIC_API_KEY",
+//         {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify({
+//             profiles: [{ email }],
+//           }),
+//         }
+//       );
+
+//       if (response.ok) {
+//         setMessage("Successfully subscribed!");
+//         setEmail("");
+//       } else {
+//         const error = await response.json();
+//         setMessage(`Error: ${error.detail || "Failed to subscribe"}`);
+//       }
+//     } catch (err) {
+//       setMessage("Network error or CORS issue.");
+//       console.error("Error submitting to Klaviyo:", err);
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <h2>Subscribe to Our Newsletter</h2>
+//       <form onSubmit={handleSubmit}>
+//         <input
+//           type="email"
+//           placeholder="Enter your email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//           required
+//           className="p-2 border rounded"
+//         />
+//         <button type="submit" className="p-2 bg-blue-500 text-white rounded">
+//           Join the List
+//         </button>
+//       </form>
+//       {message && <p>{message}</p>}
+//     </div>
+//   );
+// };
+
+// export default KlaviyoForm;

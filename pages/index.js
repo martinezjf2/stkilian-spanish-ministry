@@ -9,6 +9,7 @@ import UpcomingEvents from "@/components/global/UpcomingEvents";
 import PhotoGallery from "@/components/global/PhotoGallery";
 import IconsComponent from "@/components/global/IconsComponent";
 import VideoComponent from "@/components/global/VideoComponent";
+import KlaviyoForm from "@/components/global/KlaviyoForm";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <>
       <Jumbotron />
+      <KlaviyoForm />
       <div className="p-10 text-center">
         <h2 className="text-3xl font-bold">Welcome to Our Spanish Community</h2>
         <p className="mt-4 text-lg">
