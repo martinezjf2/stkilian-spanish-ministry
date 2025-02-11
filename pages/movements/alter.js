@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import MiniJumbo from "@/components/global/MiniJumbo";
 import ComingSoon from "@/components/global/ComingSoon";
 

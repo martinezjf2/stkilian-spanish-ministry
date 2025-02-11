@@ -1,5 +1,7 @@
 import ComingSoon from "@/components/global/ComingSoon";
 import MiniJumbo from "@/components/global/MiniJumbo";
+import Head from "next/head";
+
 
 
 export default function Hospitality() {

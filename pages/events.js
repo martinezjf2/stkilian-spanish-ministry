@@ -1,5 +1,7 @@
 import ComingSoon from "@/components/global/ComingSoon";
 import Image from "next/image";
+import Head from "next/head";
+
 
 export default function Events() {
     return (

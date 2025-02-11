@@ -10,6 +10,8 @@ import PhotoGallery from "@/components/global/PhotoGallery";
 import IconsComponent from "@/components/global/IconsComponent";
 import VideoComponent from "@/components/global/VideoComponent";
 import KlaviyoForm from "@/components/global/KlaviyoForm";
+import Head from "next/head";
+
 
 
 const inter = Inter({ subsets: ["latin"] });

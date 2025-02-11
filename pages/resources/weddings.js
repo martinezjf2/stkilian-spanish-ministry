@@ -1,7 +1,14 @@
 import ComingSoon from "@/components/global/ComingSoon";
+import Head from "next/head";
+
 
 export default function Weddings() {
-    return <>
-    <ComingSoon name="Weddings" />
-    </>
+    return (
+      <>
+        <Head>
+          <title>Seguidores de Jesus</title>
+        </Head>
+        <ComingSoon name="Weddings" />
+      </>
+    );
 }
