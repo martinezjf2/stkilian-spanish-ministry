@@ -75,7 +75,7 @@ export default function ReadingsPage({
           {/* Quote */}
           {quote && (
             <div className="mt-6 border-l-4 border-blue-500 pl-4 italic text-lg text-gray-700 dark:text-gray-400">
-              "{quote}"
+              {quote}
             </div>
           )}
 
