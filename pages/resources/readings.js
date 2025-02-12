@@ -1,9 +1,9 @@
-import ComingSoon from "@/components/global/ComingSoon";
 import axios from "axios";
 import * as cheerio from "cheerio";
 import Head from "next/head";
+import ComingSoon from "@/components/global/ComingSoon";
 
-export default function Readings({
+export default function ReadingsPage({
   date,
   ordinaryTime,
   audio,
@@ -16,8 +16,6 @@ export default function Readings({
   thoughtsTitle,
   thoughtsArray,
 }) {
-  console.log({ date });
-
   return (
     <>
       <Head>
@@ -25,46 +23,99 @@ export default function Readings({
       </Head>
 
       <ComingSoon name="Readings" />
-      <div className="p-28">
-        <h1>Scraped Data:</h1>
-        <ul>{date}</ul>
-        <ul>{ordinaryTime}</ul>
-        <ul>
-          {audio ? (
-            <li>
-              <audio controls>
+
+      <div className="p-6 md:p-12 lg:p-20 bg-gray-50 dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-300">
+        <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 transition-all">
+          {/* Page Title */}
+          <h1 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-6">
+            Daily Readings
+          </h1>
+
+          {/* Date & Time */}
+          <div className="text-center text-lg text-gray-600 dark:text-gray-400 mb-6">
+            <p className="font-semibold">{date}</p>
+            <p className="italic">{ordinaryTime}</p>
+          </div>
+
+          {/* Audio Player */}
+          {audio && (
+            <div className="flex justify-center my-6">
+              <audio
+                controls
+                className="w-full max-w-md rounded-lg"
+                controlsList="nodownload"
+              >
                 <source src={audio} type="audio/mpeg" />
-                Your browser does not support the audio tag.
+                Your browser does not support the audio element.
               </audio>
-            </li>
-          ) : (
-            <li>No audio found</li>
+            </div>
           )}
-        </ul>
-        {reading}{" "}
-        {gospel ? (
-          <p dangerouslySetInnerHTML={{ __html: gospel }} />
-        ) : (
-          <p>No gospel content available.</p>
-        )}
-        <ul>{quote}</ul>
-        <ul>{autor}</ul>
-        <ul>{autorOrigin}</ul>
-        {comments ? (
-          <p dangerouslySetInnerHTML={{ __html: comments }} />
-        ) : (
-          <p>No comments content available.</p>
-        )}
-        <ul>
-          <strong>{thoughtsTitle}</strong>
-        </ul>
-        <ul>
-          {thoughtsArray.map((thought, index) => (
-            <li key={index} className="list-disc">
-              {thought}
-            </li>
-          ))}
-        </ul>
+
+          {/* Reading */}
+          <div className="mt-6">
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+              Reading
+            </h2>
+            <p className="text-gray-700 dark:text-gray-300 mt-2">{reading}</p>
+          </div>
+
+          {/* Gospel */}
+          {gospel && (
+            <div className="mt-6">
+              <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                Gospel
+              </h2>
+              <p
+                className="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: gospel }}
+              />
+            </div>
+          )}
+
+          {/* Quote */}
+          {quote && (
+            <div className="mt-6 border-l-4 border-blue-500 pl-4 italic text-lg text-gray-700 dark:text-gray-400">
+              "{quote}"
+            </div>
+          )}
+
+          {/* Author Information */}
+          {(autor || autorOrigin) && (
+            <div className="mt-4 text-gray-600 dark:text-gray-400">
+              <p className="font-semibold">{autor}</p>
+              <p className="italic">{autorOrigin}</p>
+            </div>
+          )}
+
+          {/* Comments */}
+          {comments && (
+            <div className="mt-6">
+              <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                Comments
+              </h2>
+              <p
+                className="text-gray-700 dark:text-gray-300 mt-2"
+                dangerouslySetInnerHTML={{ __html: comments }}
+              />
+            </div>
+          )}
+
+          {/* Thoughts */}
+          {thoughtsTitle && (
+            <div className="mt-8">
+              <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                {thoughtsTitle}
+              </h2>
+              <ul className="mt-2 divide-y divide-gray-300 dark:divide-gray-700 text-gray-700 dark:text-gray-300">
+                {thoughtsArray.map((thought, index) => (
+                  <li key={index} className="py-2">
+                    {thought}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
