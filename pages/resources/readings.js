@@ -2,6 +2,7 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 import Head from "next/head";
 import ComingSoon from "@/components/global/ComingSoon";
+import MiniJumbo from "@/components/global/MiniJumbo";
 
 export default function ReadingsPage({
   date,
@@ -21,8 +22,14 @@ export default function ReadingsPage({
       <Head>
         <title>Seguidores de Jesus</title>
       </Head>
+      <MiniJumbo
+        images={[
+          "/images/readings/reading.jpg",
+          "/images/readings/reading2.jpg",
+        ]}
+        title="Daily Gospel"
+      />
 
-      <ComingSoon name="Readings" />
 
       <div className="p-6 md:p-12 lg:p-20 bg-gray-50 dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-300">
         <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 transition-all">
