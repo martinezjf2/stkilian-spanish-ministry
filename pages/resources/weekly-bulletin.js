@@ -4,6 +4,7 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 import { Download } from "lucide-react";
 import MiniJumbo from "@/components/global/MiniJumbo";
+import Link from "next/link";
 
 export default function WeeklyBulletin({ date, link, img, picture }) {
     console.log({ date });
@@ -32,7 +33,7 @@ export default function WeeklyBulletin({ date, link, img, picture }) {
             Weekly Bulletin
           </h1>
           <p className="text-gray-600 mt-4 lg:w-[90%] mx-auto">
-            Stay connected with our community by reading this week's bulletin.
+            Stay connected with our community by reading this week&apos;s bulletin.
             It includes **important announcements, upcoming events, special
             messages, and prayers** to keep you informed and spiritually
             engaged. Click the image to **read online** or download your copy
@@ -41,20 +42,20 @@ export default function WeeklyBulletin({ date, link, img, picture }) {
 
           {/* Download Button */}
           <div className="mt-6 lg:w-[90%] mx-auto">
-            <a
+            <Link
               href={link}
               download
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium text-lg rounded-full shadow-md hover:bg-blue-700 transition"
             >
               <Download size={20} />
               Download Bulletin
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Right Side - Bulletin Image with Link */}
         <div className="w-full lg:w-1/2 flex justify-center">
-          <a
+          <Link
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -68,7 +69,7 @@ export default function WeeklyBulletin({ date, link, img, picture }) {
                 className="lg:w-[70%] h-auto mx-auto rounded-lg shadow-md transition-transform duration-300 lg:hover:scale-105"
               />
             </picture>
-          </a>
+          </Link>
         </div>
       </div>
     </>
