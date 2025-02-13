@@ -76,6 +76,11 @@ export default function Footer() {
                   Daily Readings
                 </Link>
               </li>
+              <li>
+                <Link href="/resources/weekly-bulletin" className="hover:underline">
+                  Weekly Bulletin
+                </Link>
+              </li>
             </ul>
           </div>
 
