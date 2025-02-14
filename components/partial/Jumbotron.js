@@ -8,7 +8,7 @@ const images = [
   "/images/home/jovenes.jpg",
   "/images/home/monagios.jpg",
   "/images/home/jovenes2.jpg",
-  "/images/home/banda2.jpg",
+  "/images/home/banda2.jpg"
 ];
 
 export default function Jumbotron() {

@@ -9,7 +9,7 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [textColorWhite, setTextColorWhite] = useState(false);
 
-  const backgroundImageHeight = 850; // Adjust based on your background image height
+  const backgroundImageHeight = 850; // Adjust based on your background image height (This has to be equivalent to 80vh)
 
   // Handle navbar visibility and text color based on scroll
   useEffect(() => {
@@ -194,3 +194,4 @@ export default function Navbar() {
 // Need to improve this component, that when I render a new page, I want the drop down to close.
 // Need to change the arrow to a arrow from fortawesome
 // Add the logo of the white dove instead of Seguidores de Jesus
+// When you look at the weekly bulletin, the navbar continue to be white until you scroll up, i want it to only be white for the mini jumbo size
