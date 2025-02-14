@@ -6,7 +6,7 @@ export default function CommunityEvents() {
     return (
       <>
         <Head>
-          <title>Seguidores de Jesus</title>
+          <title>Seguidores de Jesus - Netlify</title>
         </Head>
         <ComingSoon name="Community Events" />
       </>

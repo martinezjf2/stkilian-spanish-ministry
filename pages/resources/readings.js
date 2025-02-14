@@ -20,7 +20,7 @@ export default function ReadingsPage({
   return (
     <>
       <Head>
-        <title>Seguidores de Jesus</title>
+        <title>Seguidores de Jesus - Netlify</title>
       </Head>
       <MiniJumbo
         images={[
@@ -29,7 +29,6 @@ export default function ReadingsPage({
         ]}
         title="Daily Gospel"
       />
-
 
       <div className="p-6 md:p-12 lg:p-20 bg-gray-50 dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-300">
         <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 transition-all">

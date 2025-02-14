@@ -17,7 +17,7 @@ export default function WeeklyBulletin({ date, link, img, picture }) {
   return (
     <>
       <Head>
-        <title>Weekly Bulletin | Seguidores de Jesus</title>
+        <title>Seguidores de Jesus - Netlify</title>
       </Head>
       <MiniJumbo
         title="Weekly bulletin"
@@ -33,9 +33,9 @@ export default function WeeklyBulletin({ date, link, img, picture }) {
             Weekly Bulletin
           </h1>
           <p className="text-gray-600 mt-4 lg:w-[90%] mx-auto">
-            Stay connected with our community by reading this week&apos;s bulletin.
-            It includes **important announcements, upcoming events, special
-            messages, and prayers** to keep you informed and spiritually
+            Stay connected with our community by reading this week&apos;s
+            bulletin. It includes **important announcements, upcoming events,
+            special messages, and prayers** to keep you informed and spiritually
             engaged. Click the image to **read online** or download your copy
             below.
           </p>

@@ -8,7 +8,7 @@ export default function Guadalupen() {
     return (
       <>
         <Head>
-          <title>Seguidores de Jesus</title>
+          <title>Seguidores de Jesus - Netlify</title>
         </Head>
         <MiniJumbo
           images={[

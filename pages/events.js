@@ -7,7 +7,7 @@ export default function Events() {
     return (
       <>
         <Head>
-          <title>Seguidores de Jesus</title>
+          <title>Seguidores de Jesus - Netlify</title>
         </Head>
         <ComingSoon name="Events" />
       </>

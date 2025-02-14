@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Seguidores de Jesus</title>
+        <title>Seguidores de Jesus - Netlify</title>
       </Head>
       <Navbar />
       <GoogleAnalytics gaId="G-T94Q6D7ZC3" debug />
