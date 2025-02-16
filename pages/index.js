@@ -11,12 +11,14 @@ import IconsComponent from "@/components/global/IconsComponent";
 import VideoComponent from "@/components/global/VideoComponent";
 import KlaviyoForm from "@/components/global/KlaviyoForm";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -38,6 +40,12 @@ export default function Home() {
       <GroupJumbotron />
       <UpcomingEvents />
       {/* <PhotoGallery /> */}
+      {/* <button
+        onClick={() => router.push("/select-form")}
+        className="p-4 bg-blue-500 text-white rounded"
+      >
+        Choose a Form
+      </button> */}
       <NewsletterCTA />
     </>
   );

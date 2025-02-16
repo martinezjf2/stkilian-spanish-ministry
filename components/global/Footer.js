@@ -77,7 +77,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources/weekly-bulletin" className="hover:underline">
+                <Link
+                  href="/resources/weekly-bulletin"
+                  className="hover:underline"
+                >
                   Weekly Bulletin
                 </Link>
               </li>
@@ -116,6 +119,11 @@ export default function Footer() {
             <h2 className="text-lg font-semibold mb-4">Registration Forms</h2>
             <ul className="space-y-2">
               <li>
+                <Link href="/sacraments" className="hover:underline">
+                  Sacraments
+                </Link>
+              </li>
+              {/* <li>
                 <Link
                   href="/forms/baptism-registration"
                   className="hover:underline"
@@ -132,7 +140,7 @@ export default function Footer() {
                 <Link href="/forms/confirmation" className="hover:underline">
                   Confirmation
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/forms/retreat-registration"
