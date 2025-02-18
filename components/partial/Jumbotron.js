@@ -1,16 +1,6 @@
 import { useState, useEffect } from "react";
 import { getHoliday } from "@/utils/dateUtils";
 
-// const defaultImages = [
-//   "/images/home/familia.jpg", // Replace with your image paths
-//   "/images/home/banda.jpg",
-//   "/images/home/renovacion.jpg",
-//   "/images/home/guadalupanos.jpg",
-//   "/images/home/jovenes.jpg",
-//   "/images/home/monagios.jpg",
-//   "/images/home/jovenes2.jpg",
-//   "/images/home/banda2.jpg",
-// ];
 
 const holidayImages = {
   "New Year's Day": [

@@ -43,12 +43,6 @@ export default function Home() {
       <GroupJumbotron />
       <UpcomingEvents />
       {/* <PhotoGallery /> */}
-      {/* <button
-        onClick={() => router.push("/select-form")}
-        className="p-4 bg-blue-500 text-white rounded"
-      >
-        Choose a Form
-      </button> */}
       <NewsletterCTA />
     </>
   );
