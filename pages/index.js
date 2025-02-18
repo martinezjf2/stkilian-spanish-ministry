@@ -12,6 +12,7 @@ import VideoComponent from "@/components/global/VideoComponent";
 import KlaviyoForm from "@/components/global/KlaviyoForm";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import DailyVerse from "@/components/global/DailyVerse";
 
 
 
@@ -25,6 +26,8 @@ export default function Home() {
         <title>Seguidores de Jesus - Netlify</title>
       </Head>
       <Jumbotron />
+      {/* Scroll of tech used like my portfolio */}
+      {/* <DailyVerse /> */}
       <KlaviyoForm />
       <div className="p-10 text-center">
         <h2 className="text-3xl font-bold">Welcome to Our Spanish Community</h2>
