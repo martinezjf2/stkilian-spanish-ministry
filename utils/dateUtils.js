@@ -32,23 +32,80 @@ export const getHoliday = () => {
     }
   };
 
+  // Function to find the second Sunday of May (Mother's Day)
+  const getMothersDay = () => {
+    let count = 0;
+    for (let i = 1; i <= 31; i++) {
+      const date = new Date(year, 4, i); // May
+      if (date.getDay() === 0) {
+        // Sunday
+        count++;
+        if (count === 2) return i;
+      }
+    }
+  };
+
+  // Function to find the third Sunday of June (Father's Day)
+  const getFathersDay = () => {
+    let count = 0;
+    for (let i = 1; i <= 30; i++) {
+      const date = new Date(year, 5, i); // June
+      if (date.getDay() === 0) {
+        // Sunday
+        count++;
+        if (count === 3) return i;
+      }
+    }
+  };
+
+  // Function to calculate Easter Sunday (Meeus/Jones/Butcher algorithm)
+  const getEasterSunday = (year) => {
+    const a = year % 19;
+    const b = Math.floor(year / 100);
+    const c = year % 100;
+    const d = Math.floor(b / 4);
+    const e = b % 4;
+    const f = Math.floor((b + 8) / 25);
+    const g = Math.floor((b - f + 1) / 3);
+    const h = (19 * a + b - d - g + 15) % 30;
+    const i = Math.floor(c / 4);
+    const k = c % 4;
+    const l = (32 + 2 * e + 2 * i - h - k) % 7;
+    const m = Math.floor((a + 11 * h + 22 * l) / 451);
+    const month = Math.floor((h + l - 7 * m + 114) / 31); // March = 3, April = 4
+    const day = ((h + l - 7 * m + 114) % 31) + 1;
+    return new Date(year, month - 1, day);
+  };
+
+  // Function to get Ash Wednesday (46 days before Easter Sunday)
+  const getAshWednesday = (year) => {
+    const easterSunday = getEasterSunday(year);
+    const ashWednesday = new Date(easterSunday);
+    ashWednesday.setDate(easterSunday.getDate() - 46);
+    return ashWednesday;
+  };
+
+  const ashWednesday = getAshWednesday(year);
+
   // Holiday Checks
   if (month === 0 && day === 1) return "New Year's Day"; // January 1st 🎉
   if (month === 4 && day === getLastMondayOfMay()) return "Memorial Day";
-  if (month === 5 && day === 14) return "Mother's Day"; // Second Sunday of May (approximate)
+  if (month === 4 && day === getMothersDay()) return "Mother's Day"; // Second Sunday of May
+  if (month === 5 && day === getFathersDay) return "Father's Day"; // Third Sunday of June
   if (month === 5 && day === 31) return "Veterans Day"; // Fixed example
   if (month === 8 && day === getFirstMondayOfSeptember()) return "Labor Day";
   if (month === 10 && day === getThanksgivingDay()) return "Thanksgiving"; // Fourth Thursday of November
   if (month === 11 && day === 12) return "Guadalupe Day"; // December 12th 🌹
   if (month === 11 && day === 25) return "Christmas"; // December 25
-  if (month === 5 && day === 21) return "Father's Day"; // Third Sunday of June (approximate)
+  if (month === 11 && day === 24) return "Christmas Eve"; // December 24
+  if (month === 1 && day === 14) return "Valentine's Day"; // Valentines Day
+  if (month === ashWednesday.getMonth() && day === ashWednesday.getDate()) return "Ash Wednesday"; // Dynamic date
 
   return null; // No holiday
 };
 
-
-// Need one for st.kilian's day, 
+// Need one for st.kilian's day,
 // Need one for spanish ministry anniversary
-// Christmas Eve
 // Day of the Holy Family
-// Valentines Day
+// Easter and Resurrection Day
+
