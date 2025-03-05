@@ -108,10 +108,8 @@ export const getHoliday = () => {
   if (month === 11 && day === 25) return "Christmas"; // December 25
   if (month === 11 && day === 24) return "Christmas Eve"; // December 24
   if (month === 1 && day === 14) return "Valentine's Day"; // Valentines Day
-  if (month === ashWednesday.getMonth() && day === ashWednesday.getDate())
-    return "Ash Wednesday"; // Dynamic date
-  if (month === palmSunday.getMonth() && day === palmSunday.getDate())
-    return "Palm Sunday"; // Dynamic date
+  if (month === ashWednesday.getMonth() && day === ashWednesday.getDate()) return "Ash Wednesday"; // Dynamic date
+  if (month === palmSunday.getMonth() && day === palmSunday.getDate()) return "Palm Sunday"; // Dynamic date
 
   if (month === 8 && day === 11) return "Remembering 9/11";
   if (month === 2 && day === 17) return "St.Patricks Day"
