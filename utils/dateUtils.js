@@ -85,6 +85,15 @@ export const getHoliday = () => {
     return ashWednesday;
   };
 
+  // Function to get Palm Sunday (7 days before Easter)
+  const getPalmSunday = (year) => {
+    const easterSunday = getEasterSunday(year);
+    const palmSunday = new Date(easterSunday);
+    palmSunday.setDate(easterSunday.getDate() - 7);
+    return palmSunday;
+  };
+
+  const palmSunday = getPalmSunday(year);
   const ashWednesday = getAshWednesday(year);
 
   // Holiday Checks
@@ -99,13 +108,21 @@ export const getHoliday = () => {
   if (month === 11 && day === 25) return "Christmas"; // December 25
   if (month === 11 && day === 24) return "Christmas Eve"; // December 24
   if (month === 1 && day === 14) return "Valentine's Day"; // Valentines Day
-  if (month === ashWednesday.getMonth() && day === ashWednesday.getDate()) return "Ash Wednesday"; // Dynamic date
+  if (month === ashWednesday.getMonth() && day === ashWednesday.getDate())
+    return "Ash Wednesday"; // Dynamic date
+  if (month === palmSunday.getMonth() && day === palmSunday.getDate())
+    return "Palm Sunday"; // Dynamic date
+
+  if (month === 8 && day === 11) return "Remembering 9/11";
+  if (month === 2 && day === 17) return "St.Patricks Day"
+  if (month === 4 && day === 5) return "Cinco de Mayo";
 
   return null; // No holiday
 };
+
+
 
 // Need one for st.kilian's day,
 // Need one for spanish ministry anniversary
 // Day of the Holy Family
 // Easter and Resurrection Day
-

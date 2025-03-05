@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import { getHoliday } from "@/utils/dateUtils";
 
 const holidayImages = {
-  "Christmas Eve": [
-    "https://c.tadst.com/gfx/750w/istock-493559502.jpg",
-  ],
+  "Christmas Eve": ["https://c.tadst.com/gfx/750w/istock-493559502.jpg"],
   "Valentine's Day": [
     "https://magazine.joovy.com/wp-content/uploads/2024/01/AdobeStock_250413771-scaled.jpeg",
     "https://images.news18.com/ibnlive/uploads/2023/02/shutterstock_2236021087-16757939493x2.jpg",
@@ -63,6 +61,29 @@ const holidayImages = {
     "https://c.tadst.com/gfx/750w/istock-1061168890.jpg",
     "https://us.images.westend61.de/0001808438pw/happy-child-enjoying-a-story-book-with-her-dad-at-home-girl-smiles-while-lying-on-a-bad-with-her-father-father-and-daughter-spending-time-together-during-the-day-JLPSF29531.jpg",
   ],
+
+  "Palm Sunday": [
+    "https://img.freepik.com/premium-photo/overhead-view-religious-cross-with-palm-leaves-easter-palm-sunday-background_601748-51772.jpg",
+  ],
+  "Remembering 9/11": [
+    "https://img.buzzfeed.com/buzzfeed-static/static/2021-09/7/20/asset/f627c523d1d4/sub-buzz-909-1631047007-11.jpg",
+    "https://images.wsj.net/im-394089?pixel_ratio=2",
+    "https://images.theconversation.com/files/234736/original/file-20180904-41720-xwahre.jpg?ixlib=rb-4.1.0&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip",
+    "https://i.natgeofe.com/k/0d86119f-42f8-4426-9b19-a75c44626f01/Flag_911_KIDS_0821_16x9.jpg",
+    "https://www.usace.army.mil/portals/2/siteimages/HistoryOffice/VignetteImages100-199/146_Pent_FT%209-11%20pic%20048P.jpg?ver=WDI0Lvw2fqqp1i6S-Aw1Ug%3D%3D",
+    "https://media.tegna-media.com/assets/WQAD/images/ca8d0c8b-3da4-41cb-846c-e2275bf7ee37/ca8d0c8b-3da4-41cb-846c-e2275bf7ee37_750x422.jpg",
+    "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2016_35/1694021/160903-pentagon-sept-11-attacks-mn-1244.jpg",
+  ],
+  "St.Patricks Day": [
+    "https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt89478e6778097ffb/6656412a6f73af0026de1145/StPatrick_1200.jpg?q=70&width=3840&auto=webp",
+  ],
+
+  "Cinco de Mayo": [
+    "https://psinapse.com/wp-content/uploads/2021/05/Cinco-De-Mayo.jpg",
+    "https://texashillcountryoliveco.com/cdn/shop/articles/easy-cinco-de-mayo-decorations-snacks-other-party-hacks-770893.jpg?v=1683038308",
+    "https://www.travelzoo.com/images/tzoo.88776.0.841152.LEAD-AlamyD2BTWC.jpg",
+  ],
+
   default: [
     "/images/home/familia.jpg",
     "/images/home/banda.jpg",
@@ -89,6 +110,29 @@ const holidayMessages = {
   "Christmas": "Merry Christmas! 🎄",
   "Mother's Day": "Happy Mother's Day! 💐",
   "Father's Day": "Happy Father's Day! 👨‍👧‍👦",
+  "Palm Sunday": "Palm Sunday 🙏",
+  "Remembering 9/11": "Remembering 9/11 🇺🇸",
+  "St.Patricks Day": "Happy St.Patrick's Day ☘️",
+  "Cinco de Mayo": "Feliz Cinco de Mayo! 🇲🇽"
+};
+
+const holidaySubtitles = {
+  "Christmas Eve": "The magic of Christmas begins tonight 🎅✨",
+  "Valentine's Day": "Love is in the air! ❤️",
+  "Ash Wednesday": "A time for reflection and repentance ✝️",
+  "New Year's Day": "A fresh start, a new beginning! 🎆",
+  "Memorial Day": "Their sacrifice will never be forgotten 🕊️",
+  "Veterans Day": "Thank you for your courage and service 🎖️🇺🇸",
+  "Labor Day": "Celebrating the hard work that builds our nation 💼",
+  "Thanksgiving": "Grateful hearts, warm homes, and cherished moments 🦃🍂",
+  "Guadalupe Day": "Nuestra Señora de Guadalupe, ruega por nosotros 🌹",
+  "Christmas": "Peace, joy, and love to all this season 🎄🎁",
+  "Mother's Day": "Thank you, Mom, for your endless love and care 💐",
+  "Father's Day": "Dad, you are our rock and our hero 👨‍👧‍👦",
+  "Palm Sunday": "Hosanna! Blessed is He who comes in the name of the Lord! 🌿",
+  "Remembering 9/11": "We will never forget the lives lost and the heroes who stood tall 🇺🇸",
+  "St.Patricks Day": "May the luck of the Irish be with you! ☘️",
+  "Cinco de Mayo": "Celebrating Mexican heritage and culture! 🇲🇽🎉",
 };
 
 export default function Jumbotron() {
@@ -138,7 +182,7 @@ export default function Jumbotron() {
         </h1>
         <p className="text-lg md:text-xl">
           {holiday
-            ? "Celebrate with us!"
+            ? holidaySubtitles[holiday]
             : "Building a stronger connection through faith and action."}
         </p>
       </div>
@@ -158,3 +202,8 @@ export default function Jumbotron() {
     </div>
   );
 }
+
+
+
+// For Cinco de Mayo
+// "https://in-sight.symrise.com/fileadmin/_processed_/1/d/csm_cincodemayo_710c0651a7.jpg",

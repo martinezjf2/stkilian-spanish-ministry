@@ -143,7 +143,7 @@ export default function Footer() {
               </li> */}
               <li>
                 <Link
-                  href="/forms/retreat-registration"
+                  href="/forms/rcia"
                   className="hover:underline"
                 >
                   R.I.C.A
