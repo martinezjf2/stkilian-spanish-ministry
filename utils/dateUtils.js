@@ -1,5 +1,7 @@
 export const getHoliday = () => {
   const today = new Date();
+  // const today = new Date("2025-03-29");
+  // console.log(today)
   const year = today.getFullYear();
   const month = today.getMonth(); // 0-indexed (Jan = 0, Dec = 11)
   const day = today.getDate();
@@ -85,6 +87,28 @@ export const getHoliday = () => {
     return ashWednesday;
   };
 
+  // Function to check if today is the last Friday of the month
+  const isLastFriday = () => {
+    const lastDayOfMonth = new Date(year, month + 1, 0); // Last day of current month
+    const lastDate = lastDayOfMonth.getDate();
+
+    for (let i = lastDate; i > lastDate - 7; i--) {
+      const date = new Date(year, month, i);
+      if (date.getDay() === 5) {
+        // 5 = Friday
+        return today.getDate() === i;
+      }
+    }
+    return false;
+  };
+
+  // Fucntion to get every Second Wednesday for Spanish Holy Hour
+  const isSecondWednesday = () => {
+    const weekday = today.getDay(); // 0 = Sunday, 3 = Wednesday
+    const dateOfMonth = today.getDate();
+    return weekday === 3 && dateOfMonth >= 8 && dateOfMonth <= 14;
+  };
+
   // Function to get Palm Sunday (7 days before Easter)
   const getPalmSunday = (year) => {
     const easterSunday = getEasterSunday(year);
@@ -97,10 +121,12 @@ export const getHoliday = () => {
   const ashWednesday = getAshWednesday(year);
 
   // Holiday Checks
+  if (isSecondWednesday()) return "Adult Holy Hour";
+  if (isLastFriday()) return "Youth Holy Hour";
   if (month === 0 && day === 1) return "New Year's Day"; // January 1st 🎉
   if (month === 4 && day === getLastMondayOfMay()) return "Memorial Day";
   if (month === 4 && day === getMothersDay()) return "Mother's Day"; // Second Sunday of May
-  if (month === 5 && day === getFathersDay) return "Father's Day"; // Third Sunday of June
+  if (month === 5 && day === getFathersDay()) return "Father's Day"; // Third Sunday of June
   if (month === 5 && day === 31) return "Veterans Day"; // Fixed example
   if (month === 8 && day === getFirstMondayOfSeptember()) return "Labor Day";
   if (month === 10 && day === getThanksgivingDay()) return "Thanksgiving"; // Fourth Thursday of November
@@ -110,10 +136,11 @@ export const getHoliday = () => {
   if (month === 1 && day === 14) return "Valentine's Day"; // Valentines Day
   if (month === ashWednesday.getMonth() && day === ashWednesday.getDate()) return "Ash Wednesday"; // Dynamic date
   if (month === palmSunday.getMonth() && day === palmSunday.getDate()) return "Palm Sunday"; // Dynamic date
-
   if (month === 8 && day === 11) return "Remembering 9/11";
-  if (month === 2 && day === 17) return "St.Patricks Day"
+  if (month === 2 && day === 17) return "St.Patricks Day";
   if (month === 4 && day === 5) return "Cinco de Mayo";
+  
+
 
   return null; // No holiday
 };
@@ -124,3 +151,8 @@ export const getHoliday = () => {
 // Need one for spanish ministry anniversary
 // Day of the Holy Family
 // Easter and Resurrection Day
+
+// Have a day for every second wednesday of every month for Holy Hour Invitation
+
+// For TESTING PURPOSES
+// console.log(getHoliday())

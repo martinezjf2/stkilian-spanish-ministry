@@ -84,6 +84,13 @@ const holidayImages = {
     "https://www.travelzoo.com/images/tzoo.88776.0.841152.LEAD-AlamyD2BTWC.jpg",
   ],
 
+  "Adult Holy Hour": [
+    "https://woforgmedia.wordonfire.org/wp-content/uploads/2019/01/15101422/thays-orrico-v4q5XmZPi-0-unsplash-scaled.jpg",
+  ],
+  "Youth Holy Hour": [
+    "https://www.churchpop.com/content/images/2023/09/eucharist.jpg",
+  ],
+
   default: [
     "/images/home/familia.jpg",
     "/images/home/banda.jpg",
@@ -113,7 +120,9 @@ const holidayMessages = {
   "Palm Sunday": "Palm Sunday 🙏",
   "Remembering 9/11": "Remembering 9/11 🇺🇸",
   "St.Patricks Day": "Happy St.Patrick's Day ☘️",
-  "Cinco de Mayo": "Feliz Cinco de Mayo! 🇲🇽"
+  "Cinco de Mayo": "Feliz Cinco de Mayo! 🇲🇽",
+  "Adult Holy Hour": "Join Us for Holy Hour 🙏",
+  "Youth Holy Hour": "Youth Holy Hour 🔥",
 };
 
 const holidaySubtitles = {
@@ -133,11 +142,14 @@ const holidaySubtitles = {
   "Remembering 9/11": "We will never forget the lives lost and the heroes who stood tall 🇺🇸",
   "St.Patricks Day": "May the luck of the Irish be with you! ☘️",
   "Cinco de Mayo": "Celebrating Mexican heritage and culture! 🇲🇽🎉",
+  "Adult Holy Hour": "Take a moment to reflect, pray, and adore Christ in the Eucharist.",
+  "Youth Holy Hour": "An evening of worship, praise, and connection with Christ for our youth.",
 };
 
 export default function Jumbotron() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const holiday = getHoliday();
+  // const holiday = "Adult Holy Hour";
   const images = holidayImages[holiday] || holidayImages.default;
 
   // Automatic slideshow effect with interval
