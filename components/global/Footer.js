@@ -54,7 +54,11 @@ export default function Footer() {
             <h2 className="text-lg font-semibold mb-4">Useful Links</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:underline">
+                <Link
+                  href="https://www.drvc.org"
+                  className="hover:underline"
+                  target="_blank"
+                >
                   Diocesan Website
                 </Link>
               </li>
@@ -97,7 +101,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources/testimonies" className="hover:underline">
+                <Link href="/testimonies" className="hover:underline">
                   Testimonies
                 </Link>
               </li>
@@ -109,6 +113,15 @@ export default function Footer() {
               <li>
                 <Link href="/resources/quincenera" className="hover:underline">
                   Quinceñera
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://bishopbarres.com"
+                  className="hover:underline"
+                  target="_blank"
+                >
+                  Our Bishop
                 </Link>
               </li>
             </ul>
@@ -142,10 +155,7 @@ export default function Footer() {
                 </Link>
               </li> */}
               <li>
-                <Link
-                  href="/forms/rcia"
-                  className="hover:underline"
-                >
+                <Link href="/forms/rcia" className="hover:underline">
                   R.I.C.A
                 </Link>
               </li>

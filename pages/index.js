@@ -13,6 +13,8 @@ import KlaviyoForm from "@/components/global/KlaviyoForm";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import DailyVerse from "@/components/global/DailyVerse";
+import NewHere from "@/components/partial/NewHere";
+import TestimoniesHomePage from "@/components/partial/Testimonies";
 
 
 
@@ -29,19 +31,27 @@ export default function Home() {
       {/* Scroll of tech used like my portfolio */}
       {/* <DailyVerse /> */}
       <KlaviyoForm />
-      <div className="p-10 text-center">
-        <h2 className="text-3xl font-bold">Welcome to Our Spanish Community</h2>
-        <p className="mt-4 text-lg">
-          We are dedicated to fostering growth, community, and faith through
-          action.
-        </p>
-      </div>
-      <SplitSection />
-      <VideoComponent link="https://www.youtube.com/embed/8OMFHVi4IGQ?si=hIeeJwLL6ipCtJJq" />
+
       {/* <CardsComponent /> */}
+
+      <SplitSection
+        image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzaY3BGZJwKHeLg_-arLzX2i_qRB5s9fvnugQX21SccDXmeSJZ8zpf0duE3fB1jsDfjURwxFl0aQZNiwt635Sc2bBWezxPqsaVVjfEGYHh24mWqjBMyONr6EwM1IClIb9RqNfxA0MGDkPx/s1600/farmingdale+021.JPG"
+        alt="St. Kilian Parish Engagement"
+        title="Engaged in Faith at St. Kilian"
+        subtitle="Deepening Our Connection"
+        description="At St. Kilian Parish, engagement is more than attendance—it's about community, service, and spiritual growth. Our Spanish community plays a vital role in shaping a welcoming and vibrant church where everyone is invited to participate."
+        buttonText="Learn More About Our Parish"
+        buttonLink="/about"
+      />
       <IconsComponent />
+      <VideoComponent link="https://www.youtube.com/embed/8OMFHVi4IGQ?si=hIeeJwLL6ipCtJJq" />
+
+      <TestimoniesHomePage />
+
       <GroupJumbotron />
       <UpcomingEvents />
+      <NewHere />
+
       {/* <PhotoGallery /> */}
       <NewsletterCTA />
     </>
