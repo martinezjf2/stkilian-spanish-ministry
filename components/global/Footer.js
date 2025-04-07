@@ -169,6 +169,11 @@ export default function Footer() {
                   Volunteer
                 </Link>
               </li>
+              <li>
+                <Link href="/contact" className="hover:underline">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
