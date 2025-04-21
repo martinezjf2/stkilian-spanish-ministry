@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Maria Lopez",
+    "slug": "maria-lopez",
+    "quote": "Joining Seguidores de Jesus changed my life...",
+    "image": "/images/maria-lopez.jpg",
+    "fullStory": "Maria found a spiritual family and strength in our community. She shares how her journey deepened her faith and brought healing through service and prayer."
+  },
+  {
+    "name": "Carlos Rivera",
+    "slug": "carlos-rivera",
+    "quote": "Serving in the Youth Ministry gave me purpose...",
+    "image": "/images/carlos-rivera.jpg",
+    "fullStory": "Carlos discovered leadership and a closer relationship with God through the Youth Ministry. His experience has been one of transformation and growth."
+  }
+]

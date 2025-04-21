@@ -1,0 +1,14 @@
+[build]
+  command = "npm install --legacy-peer-deps && npm run build"  
+  publish = ".next"          
+  functions = "netlify/functions"  
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs" 
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma = "no-cache"
+    Expires = "0"

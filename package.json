@@ -1,0 +1,44 @@
+{
+  "name": "nextcourse",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@netlify/plugin-nextjs": "^5.8.1",
+    "@next/third-parties": "^15.0.2",
+    "@react-pdf/renderer": "^4.2.1",
+    "axios": "^1.6.8",
+    "cheerio": "^1.0.0",
+    "css-loader": "^7.1.1",
+    "firebase": "^10.11.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.474.0",
+    "marked": "^12.0.1",
+    "next": "14.2.0",
+    "puppeteer": "^24.2.1",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-icons": "^5.5.0",
+    "sass": "^1.75.0",
+    "sass-loader": "^14.2.0",
+    "stripe": "^17.3.1",
+    "style-loader": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
