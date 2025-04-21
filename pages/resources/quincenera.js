@@ -32,11 +32,11 @@ export default function QuinceaneraPage() {
           </h1>
           <p className="mt-4 text-lg text-gray-700">
             A Quinceañera is a cherished tradition in the Spanish-speaking
-            community that honors a young girl’s transition from childhood to
-            womanhood on her 15th birthday. This celebration holds both cultural
-            and spiritual importance as it includes a special blessing during
-            Mass to recognize her growth, gratitude to God, and commitment to
-            her faith.
+            community that honors a young girl&#39;s transition from childhood
+            to womanhood on her 15th birthday. This celebration holds both
+            cultural and spiritual importance as it includes a special blessing
+            during Mass to recognize her growth, gratitude to God, and
+            commitment to her faith.
           </p>
         </div>
       </section>
@@ -48,11 +48,12 @@ export default function QuinceaneraPage() {
           </h2>
           <p className="text-gray-700 mb-6">
             For many Hispanic families, the Quinceañera is more than a
-            party—it's a rite of passage that symbolizes family unity, faith,
-            and responsibility. At St. Kilian Parish, we are proud to celebrate
-            this meaningful tradition with our Spanish community through a
-            special liturgical blessing that highlights the young woman’s
-            journey of faith and her intention to live a Christian life.
+            party—it&#39;s a rite of passage that symbolizes family unity,
+            faith, and responsibility. At St. Kilian Parish, we are proud to
+            celebrate this meaningful tradition with our Spanish community
+            through a special liturgical blessing that highlights the young
+            woman&#39;s journey of faith and her intention to live a Christian
+            life.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-800 mb-2">

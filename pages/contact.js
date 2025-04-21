@@ -29,23 +29,27 @@ export default function ContactPage() {
         />
       </Head>
 
-       <MiniJumbo
-              images={[
-                "/images/familia/familia.jpg",
-                "/images/familia/familia2.jpg",
-                "/images/familia/familia3.jpg",
-              ]}
-              title="Contact Us"
-            />
+      <MiniJumbo
+        images={[
+          "/images/familia/familia.jpg",
+          "/images/familia/familia2.jpg",
+          "/images/familia/familia3.jpg",
+        ]}
+        title="Contact Us"
+      />
 
       <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
           {/* Contact Form */}
           <div>
-            <h1 className="text-3xl font-extrabold text-gray-900 mb-4">Contact Us</h1>
+            <h1 className="text-3xl font-extrabold text-gray-900 mb-4">
+              Contact Us
+            </h1>
             <p className="text-gray-700 mb-6">
-              If you have any questions or need more information about our parish, services, or sacraments,
-              please don't hesitate to reach out. You should receive an email response within 24–48 hours.
+              If you have any questions or need more information about our
+              parish, services, or sacraments, please don&#39;t hesitate to
+              reach out. You should receive an email response within 24–48
+              hours.
             </p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
@@ -100,7 +104,8 @@ export default function ContactPage() {
               title="St. Kilian Parish Map"
             ></iframe>
             <p className="mt-4 text-gray-700">
-              St. Kilian Parish<br />
+              St. Kilian Parish
+              <br />
               50 Cherry St, Farmingdale, NY 11735, United States
             </p>
           </div>
