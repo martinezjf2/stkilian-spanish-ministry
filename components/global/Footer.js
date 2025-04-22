@@ -147,7 +147,7 @@ export default function Footer() {
                 {/* Make sure to add a page for both youth and adult holy hours */}
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/whats-new" className="hover:underline">
                   What's New
                 </Link>
               </li>
