@@ -148,7 +148,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/whats-new" className="hover:underline">
-                  What's New
+                  What&lsquo;s New
                 </Link>
               </li>
             </ul>
