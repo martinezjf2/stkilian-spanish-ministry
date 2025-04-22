@@ -46,6 +46,11 @@ export default function Footer() {
                   Guadalupen
                 </Link>
               </li>
+              <li>
+                <Link href="#" className="hover:underline">
+                  Religious Education
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -88,6 +93,17 @@ export default function Footer() {
                   Weekly Bulletin
                 </Link>
               </li>
+              <li>
+                <Link href="#" className="hover:underline">
+                  Mass
+                </Link>
+                {/* Have Confessions within this page and let them know when are confessions and where */}
+              </li>
+              <li>
+                <Link href="#" className="hover:underline">
+                  VIRTUS
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -122,6 +138,17 @@ export default function Footer() {
                   target="_blank"
                 >
                   Our Bishop
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:underline">
+                  Holy Hour
+                </Link>
+                {/* Make sure to add a page for both youth and adult holy hours */}
+              </li>
+              <li>
+                <Link href="#" className="hover:underline">
+                  What's New
                 </Link>
               </li>
             </ul>
@@ -167,6 +194,17 @@ export default function Footer() {
               <li>
                 <Link href="/forms/volunteer" className="hover:underline">
                   Volunteer
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:underline">
+                  Rosary
+                </Link>
+                {/* Make sure to add Rosary Sign up form for May and June and also add form for 5AM Rosaries, sign up forms */}
+              </li>
+              <li>
+                <Link href="#" className="hover:underline">
+                  LIEOC
                 </Link>
               </li>
               <li>

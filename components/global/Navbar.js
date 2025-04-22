@@ -1,26 +1,37 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  // const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [textColorWhite, setTextColorWhite] = useState(false);
 
+  const router = useRouter();
   const backgroundImageHeight = 850; // Adjust based on your background image height (This has to be equivalent to 80vh)
+
+  // Close dropdown when navigating to another page
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setDropdownOpen(false);
+      setMenuOpen(false);
+    };
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router.events]);
 
   // Handle navbar visibility and text color based on scroll
   useEffect(() => {
     const handleScroll = () => {
-      // Change text color when scrolling past the background image
       if (window.scrollY > backgroundImageHeight) {
         setTextColorWhite(true);
       } else {
         setTextColorWhite(false);
       }
-
       setLastScrollY(window.scrollY);
     };
 
@@ -155,7 +166,6 @@ export default function Navbar() {
           <Link href="/events" className="block px-5 py-2 hover:underline">
             Events
           </Link>
-
           <Link href="/language" className="block px-5 py-2 hover:underline">
             Language
           </Link>
@@ -188,10 +198,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-
-// Need to improve this component, that when I render a new page, I want the drop down to close.
-// Need to change the arrow to a arrow from fortawesome
-// Add the logo of the white dove instead of Seguidores de Jesus
-// When you look at the weekly bulletin, the navbar continue to be white until you scroll up, i want it to only be white for the mini jumbo size
