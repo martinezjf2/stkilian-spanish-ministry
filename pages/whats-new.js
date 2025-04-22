@@ -17,6 +17,18 @@ import NewsletterCTA from "@/components/global/NewsletterCTA";
 
 const updates = [
   {
+    icon: <FaHome className="text-orange-500 w-8 h-8" />,
+    title: "Dynamic Homepage for Holidays & Events",
+    description:
+      "Our homepage now dynamically updates during holidays and important liturgical events. This feature reminds parishioners of upcoming celebrations and keeps everyone informed and spiritually engaged.",
+  },
+  {
+    icon: <FaMailBulk className="text-cyan-600 w-8 h-8" />,
+    title: "Online Payments for Sacraments & Religious Education",
+    description:
+      "You can now make payments for sacraments, religious education, and event fees directly through our website. This secure and convenient option helps families save time and ensures smooth coordination with parish staff.",
+  },
+  {
     icon: <FaRobot className="text-indigo-600 w-8 h-8" />,
     title: "ChatGPT Integration",
     description:
@@ -92,11 +104,11 @@ export default function WhatsNewPage() {
       <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
-            What’s New at St. Kilian
+            What&lsquo;s New at St. Kilian
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            We’ve introduced new tools and features to help our parish thrive
-            online and in spirit.
+            We&lsquo;ve introduced new tools and features to help our parish
+            thrive online and in spirit.
           </p>
         </div>
 
