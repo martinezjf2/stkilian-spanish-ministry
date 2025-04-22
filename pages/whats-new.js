@@ -82,7 +82,7 @@ export default function WhatsNewPage() {
   return (
     <>
       <Head>
-        <title>What's New | St. Kilian Spanish Community</title>
+        <title>What&lsquo;s New | St. Kilian Spanish Community</title>
         <meta
           name="description"
           content="Explore the latest updates to the St. Kilian Spanish Community website—designed to better serve and engage our parishioners."
