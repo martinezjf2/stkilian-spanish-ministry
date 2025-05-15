@@ -137,7 +137,7 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/resources/community-events"
+              href="/events"
               className="px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
             >
               Events
