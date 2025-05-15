@@ -74,7 +74,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/resources/community-events"
+                  href="/events"
                   className="hover:underline"
                 >
                   Community Events
