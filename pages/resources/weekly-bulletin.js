@@ -78,26 +78,20 @@ export default function WeeklyBulletin({ date, link, img, picture }) {
 
 export async function getServerSideProps() {
   try {
-    //   You can use i18n to change the scraping from evangelio (Spanish) to gospel (English)
     const { data } = await axios.get("http://www.stkilian.com/bulletins", {
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
       },
     });
+
     const $ = cheerio.load(data);
 
-    // Date and Time
-    let date = $(".bulletinName a.name").first().text().trim();
-    let link = $(".bulletinName a.name").first().attr("href");
-    let picture = $(".bulletinName a.name picture source")
-      .first()
-      .attr("srcset");
-    let img = $(".bulletinName a.name picture img").first().attr("src");
-
-    // let audio = $(".audio_group a.listen").first().attr("href");
-
-    console.log("Scraped Data:");
+    let date = $(".bulletinName a.name").first().text().trim() || null;
+    let link = $(".bulletinName a.name").first().attr("href") || null;
+    let picture =
+      $(".bulletinName a.name picture source").first().attr("srcset") || null;
+    let img = $(".bulletinName a.name picture img").first().attr("src") || null;
 
     return {
       props: {
@@ -108,7 +102,14 @@ export async function getServerSideProps() {
       },
     };
   } catch (error) {
-    console.error(error);
-    return { props: { articles: [] } };
+    console.error("Scraping error:", error.message);
+    return {
+      props: {
+        date: null,
+        link: null,
+        picture: null,
+        img: null,
+      },
+    };
   }
 }
