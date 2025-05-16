@@ -1,5 +1,7 @@
 import React from "react";
 import events from "../../data/events.json";
+import Link from "next/link";
+
 
 const UpcomingEvents = () => {
 const today = new Date();
@@ -53,9 +55,11 @@ if (futureEvents.length === 0) {
                   📍 {event.location}
                 </p>
                 <p className="text-gray-700 mb-4">{event.description}</p>
-                <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-all">
-                  Learn More
-                </button>
+                <Link href={`/events/${event.slug}`}>
+                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           );
