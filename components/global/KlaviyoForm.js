@@ -15,7 +15,7 @@ const KlaviyoForm = () => {
       setTimeout(() => {
         // window._klOnsite.push(["form.disable"]);
         window._klOnsite.push(["openForm", "Yerzc7"]);
-      }, 5000);
+      }, 6000);
     };
 
     return () => {
