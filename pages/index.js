@@ -11,10 +11,10 @@ import IconsComponent from "@/components/global/IconsComponent";
 import VideoComponent from "@/components/global/VideoComponent";
 import KlaviyoForm from "@/components/global/KlaviyoForm";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import DailyVerse from "@/components/global/DailyVerse";
 import NewHere from "@/components/partial/NewHere";
 import TestimoniesHomePage from "@/components/partial/Testimonies";
+import { useRouter } from "next/router";
 
 
 
@@ -30,7 +30,7 @@ export default function Home() {
       <Jumbotron />
       {/* Scroll of tech used like my portfolio */}
       {/* <DailyVerse /> */}
-      <KlaviyoForm />
+      {router.pathname === "/" && <KlaviyoForm />}
 
       {/* <CardsComponent /> */}
 
