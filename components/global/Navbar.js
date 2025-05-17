@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Menu, X } from "lucide-react";
+import { delay, motion } from "framer-motion";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,13 +46,21 @@ export default function Navbar() {
     <nav
       className={`bg-transparent fixed backdrop-blur-md bg-white/05 transition-all duration-500 left-0 w-full z-50 px-10 py-2`}
     >
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
         className={`max-w-10xl px-6 md:px-12 py-4 flex justify-between items-center ${
           textColorWhite ? "text-black" : "text-white"
         }`}
       >
         {/* Left section: Logo and Links */}
-        <div className="flex items-center space-x-8">
+        <div
+          className="flex items-center space-x-8"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.5 }}
+        >
           <Link
             href="/"
             className="text-2xl font-bold transform md:hover:-translate-y-1 transition duration-300"
@@ -194,7 +203,7 @@ export default function Navbar() {
         <button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-      </div>
+      </motion.div>
     </nav>
   );
 }
