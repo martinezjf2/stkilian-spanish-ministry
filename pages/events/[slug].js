@@ -57,3 +57,10 @@ export default function EventDetail({ event }) {
     </>
   );
 }
+
+
+// Make sure to display more content with html within the json
+// Also make sure to have a person of contact, and phone number of contact
+// Display if there is any donation of some sort, if any
+// Reformat the display of each event, where the title and the image be, 
+// as well as the content, ad description and may need to add more keys to the json
