@@ -70,11 +70,7 @@ export default function Jumbotron() {
           <motion.button
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 2.2 + idx * 0.1}}
-            whileHover={{
-              scale: 2.5
-    
-            }}
+            transition={{ duration: 1, delay: 2.2 + idx * 0.1 }}
             key={idx}
             onClick={() => setCurrentIndex(idx)}
             className={`w-3 h-3 rounded-full ${
