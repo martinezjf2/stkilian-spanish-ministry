@@ -9,7 +9,6 @@ export default function Jumbotron() {
   const holiday = getHoliday();
   const { images, message, subtitle } = getHolidayContent(holiday);
 
-  // Slideshow rotation
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -19,7 +18,13 @@ export default function Jumbotron() {
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden">
+    <motion.div
+      className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden"
+      // initial={{ opacity: 0, y: 50 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 1 }}
+      // viewport={{ once: true, amount: 0.2 }}
+    >
       {/* Background Images */}
       {images.map((image, index) => (
         <motion.div
@@ -38,42 +43,46 @@ export default function Jumbotron() {
       ))}
 
       {/* Overlay Text */}
-      <motion.div
-        className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 bg-black/50"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.4 }}
-      >
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 bg-black/50">
         <motion.h1
           className="text-4xl md:text-6xl font-bold mb-4"
           initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
         >
           {message}
         </motion.h1>
         <motion.p
           className="text-lg md:text-xl"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
         >
           {subtitle}
         </motion.p>
-      </motion.div>
+      </div>
 
       {/* Navigation Dots */}
       <div className="absolute bottom-5 w-full flex justify-center space-x-3">
         {images.map((_, idx) => (
-          <button
+          <motion.button
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 2.2 + idx * 0.1}}
+            whileHover={{
+              scale: 2.5
+    
+            }}
             key={idx}
             onClick={() => setCurrentIndex(idx)}
             className={`w-3 h-3 rounded-full ${
               currentIndex === idx ? "bg-white" : "bg-gray-400"
             }`}
-          ></button>
+          ></motion.button>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
