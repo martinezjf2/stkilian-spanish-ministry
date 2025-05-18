@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Navbar />
       <GoogleAnalytics gaId="G-T94Q6D7ZC3" debug />
+      <GoogleAnalytics gaId="G-5SVDW08ZPG" debug />
       <Component {...pageProps} />
       <Chatbot />
       <Footer />

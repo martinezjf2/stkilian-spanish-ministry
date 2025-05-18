@@ -51,6 +51,7 @@ Currently using Node Version: 20.5.0
 - Have AI Bot (ChatGPT) enabled for any questions that may arise
 
   - Make sure to have a file that has the questions and ansrs
+  - Have a filter for when parishioners want to ask any questions that can not be answered such as if God Exists?
 - Make sure the application is multilingual
 - Add Scrollmagic and GSAP for Advanced CSS Animations
 - Add Firebase for User Authentifation for Log in, and for tables for events
@@ -76,4 +77,22 @@ Currently using Node Version: 20.5.0
 - Create a jumbotron for each ministry that props can be passed down for the image and the title
 - Create a form that will be similiar for all registrations, pass in props for the names for email.js configuration
 - Make a automatic filling PDF when data is sent from the registration form within Email.js
--
+
+###### Add FramerMotion
+
+* [X] Navbar
+* [X] Jumbotron
+* [ ] Events Index page
+* [ ] On each individual movement page
+* [ ] Components
+  * [ ] Chatbot
+  * [ ] FullImageJumbotron
+  * [ ] IconsComponent
+  * [ ] MiniJumbo
+  * [ ] NewletterCTA
+  * [ ] SplitSection
+  * [ ] UpcomingEvents
+  * [ ] VideoComponent
+  * [ ] 
+
+Make sure that all movement pages have registration forms so every participant can join the group, Census would be very easy to manage and manipulate in the sense that if the indivual is no longer present, they can be taken off.

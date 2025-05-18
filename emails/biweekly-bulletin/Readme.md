@@ -8,4 +8,6 @@
   * [ ] **English:** https://evangeli.net/gospel/day/2025-05-18
   * [ ] **Spanish**: https://evangeli.net/evangelio/dia/2025-05-18
 * [ ] Link to weekly bulletin to view with image
-* [ ] Have a link to translate it in Spanish
+* [ ] Have a link to translate it in Spanish, or just have two separate emails
+* [ ] Have a footer that will have similar footer links from the website, (which are the most important)
+* [ ]
