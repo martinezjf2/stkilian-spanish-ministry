@@ -85,7 +85,7 @@ export default function WhatsNewPage() {
     <>
       <Head>
         <title>What&lsquo;s New | St. Kilian Spanish Community</title>
-        <GoogleAnalytics gaId="G-5SVDW08ZPG" debug />
+        {/* <GoogleAnalytics gaId="G-5SVDW08ZPG" debug /> */}
 
         <meta
           name="description"

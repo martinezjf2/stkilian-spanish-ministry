@@ -15,6 +15,7 @@ import DailyVerse from "@/components/global/DailyVerse";
 import NewHere from "@/components/partial/NewHere";
 import TestimoniesHomePage from "@/components/partial/Testimonies";
 import { useRouter } from "next/router";
+// import LoaderWithBlink from "@/components/partial/LoaderWithBlink";
 
 
 
@@ -27,33 +28,35 @@ export default function Home() {
       <Head>
         <title>Seguidores de Jesus - Netlify</title>
       </Head>
-      <Jumbotron />
-      {/* Scroll of tech used like my portfolio */}
-      {/* <DailyVerse /> */}
-      {router.pathname === "/" && <KlaviyoForm />}
+      {/* <LoaderWithBlink> */}
+        <Jumbotron />
+        {/* Scroll of tech used like my portfolio */}
+        {/* <DailyVerse /> */}
+        {router.pathname === "/" && <KlaviyoForm />}
 
-      {/* <CardsComponent /> */}
+        {/* <CardsComponent /> */}
 
-      <SplitSection
-        image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzaY3BGZJwKHeLg_-arLzX2i_qRB5s9fvnugQX21SccDXmeSJZ8zpf0duE3fB1jsDfjURwxFl0aQZNiwt635Sc2bBWezxPqsaVVjfEGYHh24mWqjBMyONr6EwM1IClIb9RqNfxA0MGDkPx/s1600/farmingdale+021.JPG"
-        alt="St. Kilian Parish Engagement"
-        title="Engaged in Faith at St. Kilian"
-        subtitle="Deepening Our Connection"
-        description="At St. Kilian Parish, engagement is more than attendance—it's about community, service, and spiritual growth. Our Spanish community plays a vital role in shaping a welcoming and vibrant church where everyone is invited to participate."
-        buttonText="Learn More About Our Parish"
-        buttonLink="/about"
-      />
-      <IconsComponent />
-      <VideoComponent link="https://www.youtube.com/embed/8OMFHVi4IGQ?si=hIeeJwLL6ipCtJJq" />
+        <SplitSection
+          image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzaY3BGZJwKHeLg_-arLzX2i_qRB5s9fvnugQX21SccDXmeSJZ8zpf0duE3fB1jsDfjURwxFl0aQZNiwt635Sc2bBWezxPqsaVVjfEGYHh24mWqjBMyONr6EwM1IClIb9RqNfxA0MGDkPx/s1600/farmingdale+021.JPG"
+          alt="St. Kilian Parish Engagement"
+          title="Engaged in Faith at St. Kilian"
+          subtitle="Deepening Our Connection"
+          description="At St. Kilian Parish, engagement is more than attendance—it's about community, service, and spiritual growth. Our Spanish community plays a vital role in shaping a welcoming and vibrant church where everyone is invited to participate."
+          buttonText="Learn More About Our Parish"
+          buttonLink="/about"
+        />
+        <IconsComponent />
+        <VideoComponent link="https://www.youtube.com/embed/8OMFHVi4IGQ?si=hIeeJwLL6ipCtJJq" />
 
-      <TestimoniesHomePage />
+        <TestimoniesHomePage />
 
-      <GroupJumbotron />
-      <UpcomingEvents />
-      <NewHere />
+        <GroupJumbotron />
+        <UpcomingEvents />
+        <NewHere />
 
-      {/* <PhotoGallery /> */}
-      <NewsletterCTA />
+        {/* <PhotoGallery /> */}
+        <NewsletterCTA />
+      {/* </LoaderWithBlink> */}
     </>
   );
 }

@@ -41,19 +41,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Currently using Node Version: 20.5.0
 
-**Ideas for the project:**
+## **Ideas for the project:**
 
 - Have all the movements on the website
 - Have registration forms for all courses and curriculums
-- Have the daily gospel as well as the audio
-- Have the weekly bulletins from church on the website
-- Have calendar of event on the website
 - Have AI Bot (ChatGPT) enabled for any questions that may arise
 
   - Make sure to have a file that has the questions and ansrs
   - Have a filter for when parishioners want to ask any questions that can not be answered such as if God Exists?
 - Make sure the application is multilingual
-- Add Scrollmagic and GSAP for Advanced CSS Animations
+- Add Scrollmagic and FramerMotion for Advanced CSS Animations
 - Add Firebase for User Authentifation for Log in, and for tables for events
 - Add topics about the Jubilee Year
 - Email Marketing such as newsletter if users sign up for newsletters
@@ -61,24 +58,12 @@ Currently using Node Version: 20.5.0
   - Use Klaviyo for subscriber and have a subscribe form before the footer
 - Add a page for group pictures as well
 - Terms of Policy for the Page
-- Make sure to add Google Analytics 4 (Review the Real Estate Application to see what was done)
-- Make sure it is responsive for mobile devices
-- Deploiy on Netlify, and custom domain for seguidoresdejesus.com remove from heroku
-- Have a .env file for passwords and API Keys, and make sure to add them onto Netlify
 - Make sure that each page has a unique name for the tabname
-- Add these links:
 
-  - Contact Us
-  - Weekly Bulletin from St.Kilian
-  - Mass
+## **Create Components that are going to be global for several purposes:**
 
-**Create Components that are going to be global for several purposes:**
 
-- Create a jumbotron for each ministry that props can be passed down for the image and the title
-- Create a form that will be similiar for all registrations, pass in props for the names for email.js configuration
-- Make a automatic filling PDF when data is sent from the registration form within Email.js
-
-###### Add FramerMotion
+## **Add FramerMotion**
 
 * [X] Navbar
 * [X] Jumbotron
@@ -93,6 +78,5 @@ Currently using Node Version: 20.5.0
   * [ ] SplitSection
   * [ ] UpcomingEvents
   * [ ] VideoComponent
-  * [ ] 
 
 Make sure that all movement pages have registration forms so every participant can join the group, Census would be very easy to manage and manipulate in the sense that if the indivual is no longer present, they can be taken off.
