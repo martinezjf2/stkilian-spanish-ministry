@@ -1,6 +1,8 @@
 // pages/whats-new.js
 import Head from "next/head";
 import FullImageJumbotron from "@/components/global/FullImageJumbotron";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 // import NewHere from "@/components/partial/NewHere";
 
 import {
@@ -83,6 +85,8 @@ export default function WhatsNewPage() {
     <>
       <Head>
         <title>What&lsquo;s New | St. Kilian Spanish Community</title>
+        <GoogleAnalytics gaId="G-5SVDW08ZPG" debug />
+
         <meta
           name="description"
           content="Explore the latest updates to the St. Kilian Spanish Community website—designed to better serve and engage our parishioners."

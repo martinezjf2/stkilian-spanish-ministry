@@ -2,7 +2,7 @@ import "@/styles/scss/styles.scss";
 import Navbar from "@/components/global/Navbar";
 import Footer from "@/components/global/Footer";
 import Chatbot from "@/components/global/Chatbot";
-import { GoogleAnalytics } from "@next/third-parties/google";
+// import { GoogleAnalytics } from "@next/third-parties/google";
 import Head from "next/head";
 import GoogleAnalyticsScripts from "@/components/global/GoogleAnalyticsScripts";
 
