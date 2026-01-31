@@ -51,12 +51,6 @@ const SacramentsHomePage = () => {
   const handleSelect = (formType) => {
     router.push({
       pathname: `/sacraments/${formType.id}`,
-      query: {
-        sacramentID: formType.id,
-        name: formType.name,
-        description: formType.description,
-        image: formType.image
-      }
     });
   };
 

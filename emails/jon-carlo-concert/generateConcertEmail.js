@@ -1,0 +1,167 @@
+const fs = require("fs");
+const axios = require("axios");
+const cheerio = require("cheerio");
+const mjml = require("mjml");
+const { exec } = require("child_process")
+
+const lockFilePath = './.git/index.lock';
+if (fs.existsSync(lockFilePath)) {
+  fs.unlinkSync(lockFilePath);
+  console.log("🧹 Cleaned up leftover Git lock file." )
+}
+
+// const nodemailer = require("nodemailer");
+
+
+async function updateMjmlEmail() {
+
+    
+    let mjmlTemplate = fs.readFileSync("index.mjml", "utf-8");
+
+  const email = `
+       <!-- Hero Image -->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-image
+          src="https://www.aciprensa.com/imagespp/090421_CantanteCatolicoJonCarlo.jpg?w=720&h=480"
+          alt="Jon Carlo Live in Concert"
+          fluid-on-mobile="true"
+          padding="0"
+        />
+      </mj-column>
+    </mj-section>
+
+    <!-- Greeting -->
+    <mj-section background-color="#ffffff" padding="30px 20px 10px">
+      <mj-column>
+        <mj-text font-size="18px" align="center">
+          Hello {{ first_name|default:'Friend' }},
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Title -->
+    <mj-section background-color="#ffffff" padding="0 20px 0px">
+      <mj-column>
+        <mj-text font-size="26px" font-weight="700" align="center">
+          🎤 Jon Carlo Live in Concert
+        </mj-text>
+
+        <mj-text align="center">
+          An inspiring afternoon of music, faith, and community.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Event Details -->
+    <mj-section background-color="#ffffff" padding="0 20px 25px">
+      <mj-column>
+        <mj-text align="center">
+          <strong>📅 Date:</strong> Sunday, May 3, 2026<br />
+          <strong>⏰ Time:</strong> 1:00 PM – 5:00 PM<br />
+          <strong>🚪 Doors Open:</strong> 12:00 PM<br />
+          <strong>📍 Location:</strong>St.Kilian RC Church, Auditorium<br />
+          <strong>Address:</strong> 50 Cherry St. Farmingdale, New York 11735
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Fundraiser Purpose -->
+    <mj-section background-color="#FAFAFA" padding="20px 20px 30px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" align="center">
+          🙏 Why This Concert Matters
+        </mj-text>
+
+        <mj-text>
+          This concert is a <strong>fundraising event</strong> with a special purpose.
+          All proceeds will go toward the <strong>replacement of the Virgin Mary statue
+          located on the side of the Auditorium</strong>.
+        </mj-text>
+
+        <mj-text>
+          The statue has been a visible symbol of faith, reflection, and prayer for
+          our community over the years. Through this event, we hope to restore this
+          sacred presence so it may continue to inspire and welcome all who visit.
+        </mj-text>
+
+        <mj-text>
+          By attending, you are not only enjoying a powerful live performance by
+          <strong>Jon Carlo</strong>, but also directly contributing to a meaningful
+          and lasting project for our parish community.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Important Seating Notice -->
+    <mj-section background-color="#FFF3E0" padding="20px 20px 30px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" align="center">
+          ⚠️ Important Attendance Information
+        </mj-text>
+
+        <mj-text align="center">
+          Seating for this concert is <strong>limited</strong>, and
+          <strong>tickets will NOT be sold at the location</strong>.
+        </mj-text>
+
+        <mj-text align="center">
+          All attendees must reserve their seats in advance.
+          We encourage you to secure your spot early to ensure entry.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- CTA -->
+    <mj-section background-color="#ffffff" padding="20px 20px 40px">
+      <mj-column align="center">
+        <mj-button href="https://example.com">
+          Reserve Your Seat & Support the Cause
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider -->
+    <mj-section background-color="#ffffff" padding="0 20px">
+      <mj-column>
+        <mj-divider border-color="#dddddd" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#ffffff" padding="20px">
+      <mj-column>
+        <mj-text font-size="14px" color="#777777" align="center">
+          Thank you for supporting our community and helping preserve a symbol of faith.
+        </mj-text>
+
+        <mj-text font-size="12px" color="#aaaaaa" align="center">
+          © 2026 Your Organization Name<br />
+          You are receiving this email because you opted in to event updates.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    `;
+
+    mjmlTemplate = mjmlTemplate.replace("{{BULLETIN}}", email)
+
+    fs.writeFileSync("concert-output.mjml", mjmlTemplate, "utf-8")
+    console.log('Generated MJML email saved as output.mjml');
+
+    // Convert MJML to HTML
+    const emailHtml = mjml(mjmlTemplate).html;
+    fs.writeFileSync("concert-bulletin.html", emailHtml, "utf8");
+
+    console.log('Generated HTML email saved as new-bulletin.html');
+    
+
+}
+
+
+updateMjmlEmail();
+
+// Add a border on the image of the bulletin and add a title tag for the email bar
+// Added a github automatic push as the background using pm2,
+// make sure to have ssh installed in github as a key, and clone as ssh for macbook
+// Would need to update every Monday instead of every tuesday and set pm2 up again to happen every Monday

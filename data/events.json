@@ -2,7 +2,7 @@
   {
     "title": "Community Outreach",
     "slug": "community-outreach",
-    "date": "2025-05-22",
+    "date": "2025-12-22",
     "time": "10:00 AM",
     "location": "Community Center",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMf6Rt73Nndl5e7KPFhuJhlnVN56cqpyorUJsXWVkIyJhkk734_ecbHyS1unkd10z99X4&usqp=CAU",
@@ -11,7 +11,7 @@
   {
     "title": "Youth Programs",
     "slug": "youth-programs",
-    "date": "2025-05-23",
+    "date": "2025-12-23",
     "time": "6:30 PM",
     "location": "Youth Hall",
     "image": "https://publisher-ncreg.s3.us-east-2.amazonaws.com/pb-ncregister/swp/hv9hms/media/20200827110844_5f4780a5c2bf74d8ccdcb9d1jpeg.jpeg",
@@ -20,7 +20,7 @@
   {
     "title": "Faith Retreats",
     "slug": "faith-retreats",
-    "date": "2025-06-02",
+    "date": "2025-12-02",
     "time": "9:00 AM",
     "location": "Retreat Center",
     "image": "https://www.newchurches.com/wp-content/uploads/2024/09/Five-Practices-Pray-Purpose.jpeg",
@@ -30,11 +30,10 @@
   {
     "title": "Faith Retreats",
     "slug": "faith-retreats",
-    "date": "2025-06-02",
+    "date": "2025-12-02",
     "time": "9:00 AM",
     "location": "Retreat Center",
     "image": "https://www.newchurches.com/wp-content/uploads/2024/09/Five-Practices-Pray-Purpose.jpeg",
     "description": "Recharge spiritually and connect with others through meaningful retreat experiences."
   }
 ]
-

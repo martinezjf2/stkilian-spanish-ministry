@@ -1,4 +1,3 @@
-// pages/testimonies/[slug].js
 import testimonies from "../../data/testimonies.json";
 import Head from "next/head";
 

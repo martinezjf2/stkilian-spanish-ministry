@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import { getHoliday } from "@/utils/dateUtils";
 import { getHolidayContent } from "@/utils/getHolidayContent";
 
-export default function Jumbotron() {
+export default function ConcertJumbo({images, message, subtitle}) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const holiday = getHoliday();
-  const { images, message, subtitle } = getHolidayContent(holiday);
+//   const holiday = getHoliday();
+//   const { images, message, subtitle } = getHolidayContent(holiday);
+    
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,22 +64,6 @@ export default function Jumbotron() {
         >
           {subtitle}
         </motion.p>
-      </div>
-
-      {/* Navigation Dots */}
-      <div className="absolute bottom-5 w-full flex justify-center space-x-3">
-        {images.map((_, idx) => (
-          <motion.button
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 2.2 + idx * 0.1 }}
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === idx ? "bg-white" : "bg-gray-400"
-            }`}
-          ></motion.button>
-        ))}
       </div>
     </motion.div>
   );

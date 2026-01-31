@@ -41,34 +41,59 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Currently using Node Version: 20.5.0
 
-## **Ideas for the project:**
+## **Ideas For Project**
 
-- Have all the movements on the website
-- Have registration forms for all courses and curriculums
-- Have AI Bot (ChatGPT) enabled for any questions that may arise
+* [ ] Have all movements on the website
 
-  - Make sure to have a file that has the questions and ansrs
-  - Have a filter for when parishioners want to ask any questions that can not be answered such as if God Exists?
-- Make sure the application is multilingual
-- Add Scrollmagic and FramerMotion for Advanced CSS Animations
-- Add Firebase for User Authentifation for Log in, and for tables for events
-- Add topics about the Jubilee Year
-- Email Marketing such as newsletter if users sign up for newsletters
+  * [ ] Renovation
+  * [ ] Guadalupan
+  * [ ] Family Ministry
+  * [ ] Lectores
+  * [ ] Jovenes
+  * [ ] Reso de las 5AM
+* [ ] Have registration forms for courses/rica
+* [ ] Have AI Integration with questions preset
 
-  - Use Klaviyo for subscriber and have a subscribe form before the footer
-- Add a page for group pictures as well
-- Terms of Policy for the Page
-- Make sure that each page has a unique name for the tabname
+  * [ ] have a filter for questions that may not be asked
+* [ ] Have it Mulitlingual
 
-## **Create Components that are going to be global for several purposes:**
+  * [ ] Have i18n for the data within the json files
+  * [ ] Make button that will switch the languages
+    * [ ] English translations
+    * [ ] Spanish translations
+* [ ] Add FramerMotion and ScrollMagic for Advanced CSS Animations
+* [ ] Add Firebase for Database Managment and Firebase OAtuh
+* [ ] Email Marketing (Klaviyo)
 
+  * [ ] Welcome Email
+  * [ ] Sunday Gospel
+  * [ ] Monthly Bulletin
+* [ ] Terms of Policy Page
+* [ ] Make sure Each Page has unique tab name
+* [X] Google Analytics integrated to calculate viewers
+* [ ] Dynamic Homepage for all holidays
+* [ ] Add a services page, what support we can offer to the community
+
+  * [ ] Anonymos Alcholicos
+* [ ] Update images for each movement
+* [ ] Have a short video for each movement within the MiniJumbo
+* [ ] Make sure that Payments are linked with the St.Kilian link
+* [ ] Have a registration form for each movement and ask that all members please register so it can make it easier to do census
+
+  * [ ] Have the user input data, but use the google sheets that is already there, have it start from a specific line and a specific tab. Figure out a way I could use the google sheets API to do this.
+* [ ] VDisplay Virtus Bulletin:
+
+  * [ ] Scrape Data from a PDF to display as HTML within the page, as well as register
+  * [ ] Have an English PDF and a Spanish PDF
+* [ ] Have a page that is diverse for concerts at St.Kilian. Also make sure the links that are added are within EventBrite with a limit of tickets available.
 
 ## **Add FramerMotion**
 
 * [X] Navbar
 * [X] Jumbotron
 * [ ] Events Index page
-* [ ] On each individual movement page
+  * [ ] Display 6 events, then a show more button to display 6 more on the same page
+* [ ] Add simple motion on each individual movement page
 * [ ] Components
   * [ ] Chatbot
   * [ ] FullImageJumbotron

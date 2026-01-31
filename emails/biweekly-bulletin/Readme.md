@@ -10,4 +10,4 @@
 * [ ] Link to weekly bulletin to view with image
 * [ ] Have a link to translate it in Spanish, or just have two separate emails
 * [ ] Have a footer that will have similar footer links from the website, (which are the most important)
-* [ ]
+* [ ] Configure the Google Events API to retrieve all the events and could have them displayed within the monthly email. and also to display within the events within the pages.

@@ -1,0 +1,194 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      * {
+        box-sizing: border-box;
+
+      }
+    </mj-style>
+
+    <!-- The inline style will be used for reusability throughout the email. -->
+    <mj-style inline="inline">
+
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f2f2f2">
+
+  <mj-wrapper padding="0">
+
+  
+    <!-- Header -->
+    <mj-section background-color="#ffffff" padding="24px 20px 10px">
+      <mj-column>
+        <mj-text font-size="20px">
+          Hello {{ first_name|default:'Leader' }},
+        </mj-text>
+        <mj-text font-size="26px" font-weight="700">
+          Meeting Recap & Action Plan
+        </mj-text>
+        <mj-text color="#555555">
+          Thank you for your time and support. Below is a clear recap of what we discussed, along with decisions and next steps.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Meeting Info -->
+    <mj-section background-color="#ffffff" padding="0 20px 20px">
+      <mj-column>
+        <mj-text>
+          <strong>Meeting Date:</strong> [Sunday, Month Day, Year]<br />
+          <strong>Topic:</strong> [Meeting Topic / Purpose]<br />
+          <strong>Attendees:</strong> [Names / Ministries / Teams]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Key Goals -->
+    <mj-section background-color="#FAFAFA" padding="16px 20px">
+      <mj-column>
+        <mj-text font-size="18px" font-weight="700" align="center">
+          Key Goals Discussed
+        </mj-text>
+        <mj-text>
+          • [Goal #1]<br />
+          • [Goal #2]<br />
+          • [Goal #3]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Decisions Made -->
+    <mj-section background-color="#ffffff" padding="20px">
+      <mj-column>
+        <mj-text font-size="18px" font-weight="700" align="center">
+          Decisions / Agreements
+        </mj-text>
+        <mj-text>
+          • [Decision #1]<br />
+          • [Decision #2]<br />
+          • [Decision #3]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Action Items -->
+    <mj-section background-color="#ffffff" padding="0 20px 10px">
+      <mj-column>
+        <mj-text font-size="18px" font-weight="700" align="center">
+          Action Items & Ownership
+        </mj-text>
+        <mj-text>
+          <strong>1) [Action Item]</strong><br />
+          Owner: [Name] · Due: [Date]<br /><br />
+
+          <strong>2) [Action Item]</strong><br />
+          Owner: [Name] · Due: [Date]<br /><br />
+
+          <strong>3) [Action Item]</strong><br />
+          Owner: [Name] · Due: [Date]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Notes / Logistics -->
+    <mj-section background-color="#FAFAFA" padding="16px 20px">
+      <mj-column>
+        <mj-text font-size="18px" font-weight="700" align="center">
+          Notes & Logistics
+        </mj-text>
+        <mj-text>
+          • [Any important detail, approvals needed, budgets, schedules, constraints]<br />
+          • [Anything that must be communicated consistently to the community]<br />
+          • [Risks / concerns and how we plan to address them]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- CTA / Confirmation -->
+    <mj-section background-color="#ffffff" padding="20px">
+      <mj-column align="center">
+        <mj-text align="center" color="#555555">
+          Please reply to confirm your action items, or share any updates/corrections.
+        </mj-text>
+        <mj-button href="mailto:[your-email@example.com]?subject=Meeting%20Recap%20-%20Confirmation">
+          Reply to Confirm
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Next Meeting -->
+    <mj-section background-color="#ffffff" padding="0 20px 20px">
+      <mj-column>
+        <mj-divider border-color="#dddddd" />
+        <mj-text>
+          <strong>Next Check-In:</strong> [Day, Date] at [Time]<br />
+          <strong>Location:</strong> [Where / Zoom Link]<br />
+          <strong>Agenda Preview:</strong> [1–2 bullets]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#ffffff" padding="14px 20px">
+      <mj-column>
+        <mj-text font-size="12px" color="#888888" align="center">
+          Thank you for your leadership and dedication. If anything above needs adjusting, reply to this email and I’ll update the recap.
+        </mj-text>
+        <mj-text font-size="12px" color="#aaaaaa" align="center">
+          © 2026 [Organization / Parish Name]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    
+
+  </mj-wrapper>
+
+
+  </mj-body>
+</mjml>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- dont have to write the < symbol, it will autocomplete the tags just writing it like this: mjcolumn 
+
+By default emails should be 600px for Desktop size
+
+
+-->

@@ -25,7 +25,7 @@ export default function Baptisms() {
           "/images/jovenes/jovenes5.jpg",
           "/images/jovenes/jovenes6.jpg",
         ]}
-        title={name}
+        title="Baptism"
       />
       <ComingSoon name={name} />
       <button

@@ -10,16 +10,25 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Seguidores de Jesus - Netlify</title>
+        <title>{pageProps.title || "Seguidores de Jesus - Netlify"}</title>
       </Head>
       <Navbar />
       <GoogleAnalyticsScripts />
-      <Component {...pageProps} />
+      {/* <main className="min-h-screen"> */}
+        <Component {...pageProps} />
+      {/* </main> */}
       <Chatbot />
       <Footer />
     </>
   );
 }
 
+// Have this function on all pages to return the title from props
 
-// XuTWxP
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       title: "Events | Seguidores de Jesus",
+//     },
+//   };
+// }
