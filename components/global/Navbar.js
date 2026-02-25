@@ -65,7 +65,7 @@ export default function Navbar() {
             href="/"
             className="text-2xl font-bold transform md:hover:-translate-y-1 transition duration-300"
           >
-            Seguidores De Jesus
+            Spanish Ministry
           </Link>
 
           {/* Main menu links */}
@@ -178,9 +178,9 @@ export default function Navbar() {
           <Link href="/language" className="block px-5 py-2 hover:underline">
             Language
           </Link>
-          <Link href="/login" className="block px-5 py-2 hover:underline">
+          {/* <Link href="/login" className="block px-5 py-2 hover:underline">
             Log In
-          </Link>
+          </Link> */}
         </div>
 
         {/* Right section */}
@@ -191,12 +191,12 @@ export default function Navbar() {
           >
             Language
           </Link>
-          <Link
+          {/* <Link
             href="/login"
             className="block md:inline-block px-2 py-2 transform md:hover:-translate-y-1 transition duration-300"
           >
             Log In
-          </Link>
+          </Link> */}
         </div>
 
         {/* Hamburger menu for mobile */}

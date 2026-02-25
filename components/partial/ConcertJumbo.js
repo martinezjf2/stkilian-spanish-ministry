@@ -1,15 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { getHoliday } from "@/utils/dateUtils";
-import { getHolidayContent } from "@/utils/getHolidayContent";
+import Link from "next/link";
 
-export default function ConcertJumbo({images, message, subtitle}) {
+export default function ConcertJumbo({
+  images,
+  message,
+  subtitle,
+  ticketsHref = "/tickets",
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
-//   const holiday = getHoliday();
-//   const { images, message, subtitle } = getHolidayContent(holiday);
-    
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,14 +19,14 @@ export default function ConcertJumbo({images, message, subtitle}) {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  // ✅ Smooth scroll to the bio section
+  const handleLearnMore = () => {
+    const el = document.getElementById("artist-bio");
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <motion.div
-      className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden bg-black text-white"
-      // initial={{ opacity: 0, y: 50 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // transition={{ duration: 1 }}
-      // viewport={{ once: true, amount: 0.2 }}
-    >
+    <motion.div className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden bg-black text-white">
       {/* Background Images */}
       {images.map((image, index) => (
         <motion.div
@@ -44,7 +44,7 @@ export default function ConcertJumbo({images, message, subtitle}) {
         </motion.div>
       ))}
 
-      {/* Overlay Text */}
+      {/* Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 bg-black/50">
         <motion.h1
           className="text-4xl md:text-6xl font-bold mb-4"
@@ -55,8 +55,9 @@ export default function ConcertJumbo({images, message, subtitle}) {
         >
           {message}
         </motion.h1>
+
         <motion.p
-          className="text-lg md:text-xl"
+          className="text-lg md:text-xl mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -64,6 +65,30 @@ export default function ConcertJumbo({images, message, subtitle}) {
         >
           {subtitle}
         </motion.p>
+
+        {/* Buttons */}
+        <motion.div
+          className="flex flex-col md:flex-row gap-4"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <button
+            onClick={handleLearnMore}
+            className="px-8 py-3 border-4 border-yellow-400 hover:bg-yellow-400 bg-transparent text-white font-semibold tracking-wide hover:text-black transition-all duration-300"
+          >
+            Learn More About Him
+          </button>
+
+          {/* ✅ Buy Tickets goes to another page */}
+          <Link
+            href={ticketsHref}
+            className="px-8 py-3 border-4 border-yellow-400 hover:bg-yellow-400 bg-transparent text-white font-semibold tracking-wide hover:text-black transition-all duration-300 inline-flex items-center justify-center"
+          >
+            Buy Tickets
+          </Link>
+        </motion.div>
       </div>
     </motion.div>
   );
