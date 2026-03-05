@@ -7,7 +7,7 @@ export default function ConcertJumbo({
   images,
   message,
   subtitle,
-  ticketsHref = "/tickets",
+  ticketsHref = "https://stkilianparish.ccbchurch.com/goto/forms/95/responses/new",
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
