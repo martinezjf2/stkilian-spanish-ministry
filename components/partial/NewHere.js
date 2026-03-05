@@ -15,7 +15,7 @@ export default function NewHere() {
             </p>
             <div className="mt-6">
               <a
-                href="https://stkilian.com/join-our-parish"
+                href="https://stkilianparish.ccbchurch.com/goto/forms/39/responses/new"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition"
                 target="_blank"
               >
