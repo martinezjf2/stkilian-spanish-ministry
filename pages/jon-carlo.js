@@ -12,7 +12,7 @@ import Head from "next/head";
 import NewHere from "@/components/partial/NewHere";
 import TestimoniesHomePage from "@/components/partial/Testimonies";
 import { useRouter } from "next/router";
-import AboutArtist from "@/components/partial/AboutArtist";
+import AboutJonCarloArtist from "@/components/partial/AboutJonCarloArtist";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,9 +44,9 @@ export default function Home() {
       <Head>
         <title>Seguidores de Jesus - Netlify</title>
       </Head>
-      <ConcertJumbo images={images} message="Jon Carlos" subtitle="" />
+      <ConcertJumbo images={images} message="Jon Carlos" subtitle="Estare Contigo" />
       {router.pathname === "/" && <KlaviyoForm />}
-      <AboutArtist/>
+      <AboutJonCarloArtist/>
       <UpcomingEvents />
       <NewHere />
       <NewsletterCTA />
