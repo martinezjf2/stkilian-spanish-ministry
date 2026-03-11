@@ -44,7 +44,7 @@ export default function Home() {
       <Head>
         <title>Seguidores de Jesus - Netlify</title>
       </Head>
-      <ConcertJumbo images={images} message="Jon Carlos" subtitle="Estare Contigo" />
+      <ConcertJumbo images={images} message="Jon Carlo" subtitle="Estare Contigo" />
       {router.pathname === "/" && <KlaviyoForm />}
       <AboutJonCarloArtist/>
       <UpcomingEvents />
