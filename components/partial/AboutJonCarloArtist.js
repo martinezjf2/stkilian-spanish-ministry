@@ -6,17 +6,17 @@ import SplitSection from "../global/SplitSection";
 
 export default function AboutJonCarloArtist() {
   const paragraphs = [
-    `Jon Carlo es un productor y cantautor católico nacido el 1 de junio de 1976 en la República Dominicana. Tras emigrar a los Estados Unidos, vivió una fuerte experiencia de conversión a los 16 años que marcó un antes y un después en su vida. Ese encuentro con Dios lo llevó a dejar atrás un pasado difícil y a comenzar un camino de fe, entrega y propósito.`,
+    `Jon Carlo es un productor y cantautor católico que ha dedicado su vida a agradar a Dios a través de su música y creatividad. Nacido en la República Dominicana y criado en los Estados Unidos, su historia está marcada por un profundo encuentro con Dios que transformó su vida y le dio un nuevo propósito.`,
 
-    `Movido por el Espíritu Santo, inició su formación en la Palabra y fundó en Nueva York el ministerio “Unción Juvenil”, dando origen a una nueva generación de jóvenes comprometidos con la alabanza y la adoración. Desde entonces, su vida ha estado centrada en evangelizar a través de la música, utilizando su talento como instrumento para acercar a otros a Dios.`,
+    `A partir de esa experiencia, comenzó a formarse en la Palabra y respondió al llamado del Espíritu Santo fundando en Nueva York el ministerio “Unción Juvenil”. Este ministerio dio inicio a una nueva generación de jóvenes que decidieron servir a Dios a través de la alabanza y la adoración, impactando numerosas vidas dentro y fuera de la Iglesia.`,
 
-    `A lo largo de su carrera, Jon Carlo ha producido e interpretado canciones que transmiten mensajes profundos de fe, esperanza y transformación. Temas como “Nada es Imposible” inspiran a confiar en el poder de Dios aun en medio de las dificultades, mientras que canciones como “Dame de Beber” invitan a tener una relación más íntima con Cristo, reconociendo nuestra necesidad de Él.`,
+    `Como productor y cantautor, Jon Carlo ha participado en diversos proyectos musicales dentro de la música católica contemporánea, colaborando con reconocidos artistas y aportando su talento tanto en la composición como en la producción. Su música se caracteriza por transmitir mensajes de esperanza, fe y transformación.`,
 
-    `Asimismo, su música también toca corazones a través de mensajes de consuelo y acompañamiento espiritual. En canciones como “Estaré Contigo”, transmite la certeza de que Dios nunca nos abandona, incluso en los momentos de soledad o dolor. Sus letras conectan con quienes han sentido distancia de Dios, recordándoles que Él siempre permanece fiel.`,
+    `En su carrera como solista, ha lanzado producciones que han marcado a muchos creyentes, con canciones que invitan a confiar en Dios, a acercarse a Él y a reconocer su presencia en todo momento. Temas como “Te Necesito”, “La Mano de Dios” y “No Puedo Parar” se han convertido en himnos dentro de muchas comunidades.`,
 
-    `Uno de los momentos más significativos de su ministerio fue su encuentro con el Papa Francisco, donde tuvo la oportunidad de compartir su misión evangelizadora a través de la música. Este encuentro representó una confirmación de su llamado y un impulso para continuar llevando el mensaje de Dios a más personas alrededor del mundo.`,
+    `Su ministerio ha trascendido fronteras, llevando su música a diferentes países y escenarios importantes dentro de la Iglesia. Uno de los momentos más significativos fue su participación en la Jornada Mundial de la Juventud, donde tuvo la oportunidad de cantar ante el Papa Francisco, confirmando así el impacto de su misión evangelizadora.`,
 
-    `Hoy en día, Jon Carlo continúa sirviendo con entrega y pasión, viajando a diferentes comunidades y países para compartir su música y su testimonio. Su misión sigue siendo clara: evangelizar, sanar corazones y recordar a cada persona que Dios nunca abandona a sus hijos, y que siempre hay esperanza para comenzar de nuevo en Su amor.`,
+    `Hoy en día, Jon Carlo continúa sirviendo con pasión, llevando un mensaje claro a través de su música: Dios está siempre presente, incluso en los momentos más difíciles, y nunca deja de acompañar a sus hijos.`,
   ];
 
   return (
