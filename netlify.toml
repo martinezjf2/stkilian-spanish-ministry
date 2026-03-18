@@ -12,3 +12,9 @@
     Cache-Control = "no-cache, no-store, must-revalidate"
     Pragma = "no-cache"
     Expires = "0"
+
+[[redirects]]
+  from = "/*[A-Z]*"
+  to = "/:splat"
+  status = 301
+  force = true
