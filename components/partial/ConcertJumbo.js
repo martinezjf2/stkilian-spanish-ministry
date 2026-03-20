@@ -26,7 +26,7 @@ export default function ConcertJumbo({
   };
 
   return (
-    <motion.div className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden bg-black text-white">
+    <motion.div className="relative w-full h-[100vh] md:h-screen overflow-hidden bg-black text-white">
       {/* Background Images */}
       {images.map((image, index) => (
         <motion.div
@@ -47,7 +47,7 @@ export default function ConcertJumbo({
       {/* Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 bg-black/50">
         <motion.p
-          className="text-sm md:text-lg tracking-[0.3em] uppercase text-yellow-400 mb-4"
+          className="text-sm md:text-md tracking-[0.3em] uppercase text-yellow-400 mb-4"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
