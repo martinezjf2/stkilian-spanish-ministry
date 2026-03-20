@@ -46,6 +46,15 @@ export default function ConcertJumbo({
 
       {/* Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 bg-black/50">
+        <motion.p
+          className="text-sm md:text-lg tracking-[0.3em] uppercase text-yellow-400 mb-4"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          St. Kilian's Church en Farmingdale Te Invita
+        </motion.p>
         <motion.h1
           className="text-9xl md:text-6xl font-bold mb-4"
           initial={{ opacity: 0, y: -30 }}
