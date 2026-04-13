@@ -16,7 +16,7 @@ export default function Events() {
   return (
     <>
       <Head>
-        <title>Upcoming Events | Seguidores de Jesus</title>
+        <title>Upcoming Events | St. Kilian Spanish Ministry</title>
       </Head>
       <MiniJumbo
         images={[
@@ -71,7 +71,7 @@ export default function Events() {
                     </p>
                     <p className="text-gray-700 mb-4">{event.description}</p>
                     <Link
-                      href={`/events/${event.slug}`}
+                      href={`/${event.route}`}
                       className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
                     >
                       Learn More

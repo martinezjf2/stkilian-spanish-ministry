@@ -44,7 +44,7 @@ if (futureEvents.length === 0) {
               <img
                 src={event.image}
                 alt={event.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-54 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-2">{event.title}</h3>
@@ -55,7 +55,7 @@ if (futureEvents.length === 0) {
                   📍 {event.location}
                 </p>
                 <p className="text-gray-700 mb-4">{event.description}</p>
-                <Link href={`/events/${event.slug}`}>
+                <Link href={`/${event.route}`}>
                   <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded">
                     Learn More
                   </button>
