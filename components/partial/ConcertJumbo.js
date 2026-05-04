@@ -91,12 +91,12 @@ export default function ConcertJumbo({
           </button>
 
           {/* ✅ Buy Tickets goes to another page */}
-          <Link
+          {/* <Link
             href={ticketsHref}
             className="px-8 py-3 border-4 border-yellow-400 hover:bg-yellow-400 bg-transparent text-white font-semibold tracking-wide hover:text-black transition-all duration-300 inline-flex items-center justify-center"
           >
             Buy Tickets
-          </Link>
+          </Link> */}
         </motion.div>
       </div>
     </motion.div>
