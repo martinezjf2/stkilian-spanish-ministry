@@ -13,6 +13,7 @@ import NewHere from "@/components/partial/NewHere";
 import TestimoniesHomePage from "@/components/partial/Testimonies";
 import { useRouter } from "next/router";
 import AboutJonCarloArtist from "@/components/partial/AboutJonCarloArtist";
+import MediaGallery from "@/components/global/MediaGallery";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,41 @@ const images = [
   "/images/jon-carlo-concert/25.png",
 ];
 
+const jonCarloMedia = [
+  {
+    type: "video",
+    src: "https://www.youtube.com/embed/hDwt2AD02qs?si=wbVhGKrS_YHFUNeS",
+    alt: "Jon Carlo Introduction Moment",
+  },
+  {
+    type: "image",
+    src: "https://jon-carlos-live-concert.s3.us-east-1.amazonaws.com/69.jpeg",
+    alt: "Viene El Rey",
+  },
+  {
+    type: "image",
+    src: "https://jon-carlos-decor.s3.us-east-1.amazonaws.com/9.jpeg",
+    alt: "Concert Preshow",
+  },
+  {
+    type: "video",
+    src: "https://www.youtube.com/embed/vfzgatpw9As?si=zUYC-EG1e_vqok95",
+    alt: "Vida Nueva",
+  },
+  {
+    type: "image",
+    src: "https://jon-carlos-live-concert.s3.us-east-1.amazonaws.com/46.jpeg",
+    alt: "Baja La Uncion",
+  },
+  {
+    type: "image",
+    src: "https://jon-carlos-live-concert.s3.us-east-1.amazonaws.com/78.jpeg",
+    alt: "Quema Mi Vida",
+  }
+
+  
+];
+
 // NOTE: Compress the images above so it does not take a lot of memory when loading the images on the page.
 
 export default function Home() {
@@ -44,9 +80,19 @@ export default function Home() {
       <Head>
         <title>Concierto de Jon Carlo</title>
       </Head>
-      <ConcertJumbo images={images} message="Jon Carlo" subtitle="Estare Contigo" />
+      <ConcertJumbo
+        images={images}
+        message="Jon Carlo"
+        subtitle="Estare Contigo"
+      />
       {router.pathname === "/" && <KlaviyoForm />}
-      <AboutJonCarloArtist/>
+      <AboutJonCarloArtist />
+
+      <MediaGallery
+        title="Jon Carlo Concert Moments"
+        items={jonCarloMedia}
+        itemsPerPage={12}
+      />
       <UpcomingEvents />
       <NewHere />
       <NewsletterCTA />

@@ -97,6 +97,14 @@ export default function ConcertJumbo({
           >
             Buy Tickets
           </Link> */}
+
+          {/* ✅ View Gallery of the event */}
+          <Link
+            href="/jon-carlo/gallery"
+            className="px-8 py-3 border-4 border-yellow-400 hover:bg-yellow-400 bg-transparent text-white font-semibold tracking-wide hover:text-black transition-all duration-300 inline-flex items-center justify-center"
+          >
+            View Gallery
+          </Link>
         </motion.div>
       </div>
     </motion.div>
