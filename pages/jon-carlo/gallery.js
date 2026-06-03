@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
+
 
 const galleryItems = [
 // Video 1
@@ -490,6 +492,9 @@ export default function AlbumPage() {
 
   return (
     <>
+      <Head>
+        <title>Gallery - Concierto de Jon Carlo</title>
+      </Head>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
