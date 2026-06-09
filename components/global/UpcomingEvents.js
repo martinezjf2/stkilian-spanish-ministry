@@ -55,11 +55,14 @@ if (futureEvents.length === 0) {
                   📍 {event.location}
                 </p>
                 <p className="text-gray-700 mb-4">{event.description}</p>
-                <Link href={`/${event.route}`}>
-                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded">
-                    Learn More
-                  </button>
-                </Link>
+                {event.route && 
+                  <Link href={`/${event.route}`}>
+                    <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded">
+                      Learn More
+                    </button>
+                  </Link>
+                }
+                
               </div>
             </div>
           );
